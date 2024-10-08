@@ -1,9 +1,18 @@
+import os
+from dotenv import load_dotenv
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 import torchvision.models as models
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
+
+# Cargar las variables de entorno del archivo .env
+load_dotenv()
+
+# Obtener las rutas de los datasets desde las variables de entorno
+train_dataset_path = os.getenv("TRAIN_DATASET_PATH")
+val_dataset_path = os.getenv("VAL_DATASET_PATH")
 
 # Verificación de la disponibilidad de GPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -23,16 +32,16 @@ num_epochs = 10
 
 # Transformaciones y Aumento de Datos
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),  # Tamaño de entrada esperado por ResNet
+    transforms.Resize((224, 224)),
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # Normalización recomendada para modelos de PyTorch
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
 # Cargar el Dataset de Imágenes
-train_dataset = ImageFolder(root='TRAIN_DATASET_PATH', transform=transform)
+train_dataset = ImageFolder(root=train_dataset_path, transform=transform)
 train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
 
-val_dataset = ImageFolder(root='VAL_DATASET_PATH', transform=transform)
+val_dataset = ImageFolder(root=val_dataset_path, transform=transform)
 val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=False)
 
 # Definir la función de pérdida y el optimizador
