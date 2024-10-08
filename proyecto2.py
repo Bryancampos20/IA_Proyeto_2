@@ -29,10 +29,10 @@ transform = transforms.Compose([
 ])
 
 # Cargar el Dataset de Imágenes
-train_dataset = ImageFolder(root='ruta/a/tu/dataset/train', transform=transform)
+train_dataset = ImageFolder(root='TRAIN_DATASET_PATH', transform=transform)
 train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
 
-val_dataset = ImageFolder(root='ruta/a/tu/dataset/val', transform=transform)
+val_dataset = ImageFolder(root='VAL_DATASET_PATH', transform=transform)
 val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=False)
 
 # Definir la función de pérdida y el optimizador
