@@ -1,4 +1,5 @@
 import os
+import cv2
 from dotenv import load_dotenv
 import torch
 import torch.nn as nn
@@ -21,35 +22,81 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Modelo A: Cargar ResNet50 preentrenado
 model_a = models.resnet50(pretrained=True)
-
-# Ajustar la última capa para adaptarse a 3 clases
 num_features = model_a.fc.in_features
 model_a.fc = nn.Linear(num_features, 3)
 model_a = model_a.to(device)
 
 # Hiperparámetros y configuración de entrenamiento
-batch_size = 4  # Reducido a 16 para mejorar el uso de memoria
+batch_size = 4
 learning_rate = 0.001
-num_epochs = 2
+num_epochs = 1
+scaler = GradScaler()
 
-# Transformaciones y Aumento de Datos
+# Transformaciones comunes a todos los datasets
 transform = transforms.Compose([
     transforms.Resize((96, 96)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
-# Cargar el Dataset de Imágenes
-train_dataset = ImageFolder(root=train_dataset_path, transform=transform)
-train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
+# Funciones de preprocesamiento de imágenes
+def apply_bilateral_filter(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    for root, _, files in os.walk(input_dir):
+        for file in files:
+            if file.endswith(('png', 'jpg', 'jpeg')):
+                img_path = os.path.join(root, file)
+                img = cv2.imread(img_path)
+                filtered_img = cv2.bilateralFilter(img, 9, 75, 75)
+                save_path = os.path.join(output_dir, file)
+                cv2.imwrite(save_path, filtered_img)
+
+def apply_canny_filter(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    for root, _, files in os.walk(input_dir):
+        for file in files:
+            if file.endswith(('png', 'jpg', 'jpeg')):
+                img_path = os.path.join(root, file)
+                img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+                filtered_img = cv2.Canny(img, 100, 200)
+                save_path = os.path.join(output_dir, file)
+                cv2.imwrite(save_path, filtered_img)
+
+# Crear datasets preprocesados si no existen
+processed_dir = "processed_datasets"
+raw_data_dir = os.path.join(processed_dir, "raw")
+bilateral_data_dir = os.path.join(processed_dir, "bilateral")
+canny_data_dir = os.path.join(processed_dir, "canny")
+
+if not os.path.exists(raw_data_dir):
+    os.makedirs(raw_data_dir, exist_ok=True)
+    for root, _, files in os.walk(train_dataset_path):
+        for file in files:
+            if file.endswith(('png', 'jpg', 'jpeg')):
+                img_path = os.path.join(root, file)
+                save_path = os.path.join(raw_data_dir, file)
+                cv2.imwrite(save_path, cv2.imread(img_path))
+
+if not os.path.exists(bilateral_data_dir):
+    apply_bilateral_filter(train_dataset_path, bilateral_data_dir)
+
+if not os.path.exists(canny_data_dir):
+    apply_canny_filter(train_dataset_path, canny_data_dir)
+
+# Crear los loaders de los tres conjuntos de datos
+train_raw_dataset = ImageFolder(root=raw_data_dir, transform=transform)
+train_bilateral_dataset = ImageFolder(root=bilateral_data_dir, transform=transform)
+train_canny_dataset = ImageFolder(root=canny_data_dir, transform=transform)
+
+train_raw_loader = DataLoader(dataset=train_raw_dataset, batch_size=batch_size, shuffle=True)
+train_bilateral_loader = DataLoader(dataset=train_bilateral_dataset, batch_size=batch_size, shuffle=True)
+train_canny_loader = DataLoader(dataset=train_canny_dataset, batch_size=batch_size, shuffle=True)
 
 val_dataset = ImageFolder(root=val_dataset_path, transform=transform)
 val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=False)
 
 # Definir la función de pérdida y el optimizador
 criterion = nn.CrossEntropyLoss()
-optimizer_a = torch.optim.Adam(model_a.parameters(), lr=learning_rate)
-scaler = GradScaler()  # Escalador para precisión mixta
 
 # Función de entrenamiento con precisión mixta
 def train(model, train_loader, criterion, optimizer, device):
@@ -59,7 +106,7 @@ def train(model, train_loader, criterion, optimizer, device):
         images, labels = images.to(device), labels.to(device)
         
         optimizer.zero_grad()
-        with autocast():  # Usar precisión mixta
+        with autocast():
             outputs = model(images)
             loss = criterion(outputs, labels)
         
@@ -67,10 +114,6 @@ def train(model, train_loader, criterion, optimizer, device):
         scaler.step(optimizer)
         scaler.update()
 
-        # Liberar memoria después de cada batch
-        torch.cuda.synchronize()
-        torch.cuda.empty_cache()
-        
         running_loss += loss.item()
     
     return running_loss / len(train_loader)
@@ -84,29 +127,35 @@ def validate(model, val_loader, criterion, device):
     with torch.no_grad():
         for images, labels in val_loader:
             images, labels = images.to(device), labels.to(device)
-            
             outputs = model(images)
             loss = criterion(outputs, labels)
             running_loss += loss.item()
             
-            # Obtener predicciones
             _, predicted = torch.max(outputs, 1)
             correct_predictions += (predicted == labels).sum().item()
     
     accuracy = correct_predictions / len(val_loader.dataset)
     return running_loss / len(val_loader), accuracy
 
-# Loop de entrenamiento y validación para Modelo A
+# Loop de entrenamiento y validación para Modelo A en los tres conjuntos de datos
+optimizer_a = torch.optim.Adam(model_a.parameters(), lr=learning_rate)
 for epoch in range(num_epochs):
-    train_loss = train(model_a, train_loader, criterion, optimizer_a, device)
-    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
+    print(f"\n--- Epoch [{epoch+1}/{num_epochs}] ---")
     
-    print(f"Modelo A - Epoch [{epoch+1}/{num_epochs}], "
-          f"Train Loss: {train_loss:.4f}, "
-          f"Val Loss: {val_loss:.4f}, "
-          f"Val Accuracy: {val_accuracy:.4f}")
-    torch.cuda.synchronize()
-    torch.cuda.empty_cache()  # Liberar memoria GPU
+    # Entrenamiento y validación en dataset crudo
+    train_loss = train(model_a, train_raw_loader, criterion, optimizer_a, device)
+    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
+    print(f"Modelo A - Raw Data - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+    # Entrenamiento y validación en dataset bilateral
+    train_loss = train(model_a, train_bilateral_loader, criterion, optimizer_a, device)
+    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
+    print(f"Modelo A - Bilateral Filter - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+    # Entrenamiento y validación en dataset canny
+    train_loss = train(model_a, train_canny_loader, criterion, optimizer_a, device)
+    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
+    print(f"Modelo A - Canny Edge - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
 
 # Modelo B: Diseño propio de CNN con módulo Inception
 class CustomCNN(nn.Module):
@@ -128,10 +177,9 @@ class CustomCNN(nn.Module):
         self.conv3 = nn.Conv2d(in_channels=96, out_channels=128, kernel_size=3, padding=1)
         self.conv4 = nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1)
         
-        # Capa totalmente conectada (se inicializa en forward)
+        # Capas totalmente conectadas
         self.fc1 = None
         self.fc2 = None
-        
         self.num_classes = num_classes
         
     def forward(self, x):
@@ -155,15 +203,12 @@ class CustomCNN(nn.Module):
         x = self.pool(x)
         x = self.dropout(x)
         
-        # Aplanar y ajustar dinámicamente la capa fc1
+        # Aplanar y pasar por capas totalmente conectadas
         x = x.view(x.size(0), -1)
-        
-        # Inicialización de fc1 y fc2 en función de la salida aplanada
         if self.fc1 is None:
             self.fc1 = nn.Linear(x.size(1), 512).to(x.device)
             self.fc2 = nn.Linear(512, self.num_classes).to(x.device)
         
-        # Pasar por capas totalmente conectadas
         x = F.relu(self.fc1(x))
         x = self.dropout(x)
         x = self.fc2(x)
@@ -174,14 +219,21 @@ class CustomCNN(nn.Module):
 model_b = CustomCNN(num_classes=3).to(device)
 optimizer_b = torch.optim.Adam(model_b.parameters(), lr=learning_rate)
 
-# Loop de entrenamiento y validación para Modelo B con precisión mixta
+# Loop de entrenamiento y validación para Modelo B en los tres conjuntos de datos
 for epoch in range(num_epochs):
-    train_loss = train(model_b, train_loader, criterion, optimizer_b, device)
-    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+    print(f"\n--- Epoch [{epoch+1}/{num_epochs}] ---")
     
-    print(f"Modelo B - Epoch [{epoch+1}/{num_epochs}], "
-          f"Train Loss: {train_loss:.4f}, "
-          f"Val Loss: {val_loss:.4f}, "
-          f"Val Accuracy: {val_accuracy:.4f}")
-    torch.cuda.synchronize()
-    torch.cuda.empty_cache()  # Liberar memoria GPU
+    # Entrenamiento y validación en dataset crudo
+    train_loss = train(model_b, train_raw_loader, criterion, optimizer_b, device)
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+    print(f"Modelo B - Raw Data - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+    # Entrenamiento y validación en dataset bilateral
+    train_loss = train(model_b, train_bilateral_loader, criterion, optimizer_b, device)
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+    print(f"Modelo B - Bilateral Filter - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+    # Entrenamiento y validación en dataset canny
+    train_loss = train(model_b, train_canny_loader, criterion, optimizer_b, device)
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+    print(f"Modelo B - Canny Edge - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")

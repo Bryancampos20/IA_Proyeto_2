@@ -1,3 +1,4 @@
 DS# Ignora archivos del sistema Mac 
 .DS_store
 .env
+my_env/
