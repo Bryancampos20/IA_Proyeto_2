@@ -6,6 +6,7 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
+import torch.nn.functional as F
 
 # Cargar las variables de entorno del archivo .env
 load_dotenv()
