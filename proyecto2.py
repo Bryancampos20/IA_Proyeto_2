@@ -99,6 +99,8 @@ for epoch in range(num_epochs):
           f"Train Loss: {train_loss:.4f}, "
           f"Val Loss: {val_loss:.4f}, "
           f"Val Accuracy: {val_accuracy:.4f}")
+    # Liberar memoria GPU
+    torch.cuda.empty_cache()
 
 # Modelo B: Diseño propio de CNN con módulo Inception
 class CustomCNN(nn.Module):
@@ -175,3 +177,5 @@ for epoch in range(num_epochs):
           f"Train Loss: {train_loss:.4f}, "
           f"Val Loss: {val_loss:.4f}, "
           f"Val Accuracy: {val_accuracy:.4f}")
+    # Liberar memoria GPU
+    torch.cuda.empty_cache()
