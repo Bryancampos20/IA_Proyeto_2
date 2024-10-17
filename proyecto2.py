@@ -113,11 +113,11 @@ class CustomCNN(nn.Module):
         
         # Módulo Inception personalizado
         self.inception_1x1 = nn.Conv2d(in_channels=64, out_channels=32, kernel_size=1)
-        self.inception_3x3 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
-        self.inception_5x5 = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=5, padding=2)
+        self.inception_3x3 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1)
+        self.inception_5x5 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=5, padding=2)
 
         # Segunda capa convolucional
-        self.conv3 = nn.Conv2d(in_channels=128, out_channels=128, kernel_size=3, padding=1)
+        self.conv3 = nn.Conv2d(in_channels=96, out_channels=128, kernel_size=3, padding=1)  # 96 canales = 32 + 32 + 32
         self.conv4 = nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1)
         
         # Capa totalmente conectada
@@ -134,10 +134,10 @@ class CustomCNN(nn.Module):
         # Módulo inception
         x_1x1 = F.relu(self.inception_1x1(x))
         x_3x3 = F.relu(self.inception_3x3(x_1x1))
-        x_5x5 = F.relu(self.inception_5x5(x_3x3))
+        x_5x5 = F.relu(self.inception_5x5(x_1x1))
         
         # Concatenación de los filtros de inception
-        inception_output = torch.cat([x_1x1, x_3x3, x_5x5], dim=1)
+        inception_output = torch.cat([x_1x1, x_3x3, x_5x5], dim=1)  # 96 canales de salida
         
         # Segunda capa convolucional + pooling + dropout
         x = F.relu(self.conv3(inception_output))
