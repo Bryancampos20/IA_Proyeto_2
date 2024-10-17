@@ -7,6 +7,7 @@ import torchvision.models as models
 from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
+from torch.cuda.amp import autocast, GradScaler
 
 # Cargar las variables de entorno del archivo .env
 load_dotenv()
@@ -27,7 +28,7 @@ model_a.fc = nn.Linear(num_features, 3)
 model_a = model_a.to(device)
 
 # Hiperparámetros y configuración de entrenamiento
-batch_size = 32
+batch_size = 16  # Reducido a 16 para mejorar el uso de memoria
 learning_rate = 0.001
 num_epochs = 10
 
@@ -48,22 +49,23 @@ val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=Fals
 # Definir la función de pérdida y el optimizador
 criterion = nn.CrossEntropyLoss()
 optimizer_a = torch.optim.Adam(model_a.parameters(), lr=learning_rate)
+scaler = GradScaler()  # Escalador para precisión mixta
 
-# Función de entrenamiento
+# Función de entrenamiento con precisión mixta
 def train(model, train_loader, criterion, optimizer, device):
     model.train()
     running_loss = 0.0
     for images, labels in train_loader:
         images, labels = images.to(device), labels.to(device)
         
-        # Forward pass
-        outputs = model(images)
-        loss = criterion(outputs, labels)
-        
-        # Backward pass y optimización
         optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+        with autocast():  # Usar precisión mixta
+            outputs = model(images)
+            loss = criterion(outputs, labels)
+        
+        scaler.scale(loss).backward()
+        scaler.step(optimizer)
+        scaler.update()
         
         running_loss += loss.item()
     
@@ -99,8 +101,7 @@ for epoch in range(num_epochs):
           f"Train Loss: {train_loss:.4f}, "
           f"Val Loss: {val_loss:.4f}, "
           f"Val Accuracy: {val_accuracy:.4f}")
-    # Liberar memoria GPU
-    torch.cuda.empty_cache()
+    torch.cuda.empty_cache()  # Liberar memoria GPU
 
 # Modelo B: Diseño propio de CNN con módulo Inception
 class CustomCNN(nn.Module):
@@ -168,7 +169,7 @@ class CustomCNN(nn.Module):
 model_b = CustomCNN(num_classes=3).to(device)
 optimizer_b = torch.optim.Adam(model_b.parameters(), lr=learning_rate)
 
-# Loop de entrenamiento y validación para Modelo B
+# Loop de entrenamiento y validación para Modelo B con precisión mixta
 for epoch in range(num_epochs):
     train_loss = train(model_b, train_loader, criterion, optimizer_b, device)
     val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
@@ -177,5 +178,4 @@ for epoch in range(num_epochs):
           f"Train Loss: {train_loss:.4f}, "
           f"Val Loss: {val_loss:.4f}, "
           f"Val Accuracy: {val_accuracy:.4f}")
-    # Liberar memoria GPU
-    torch.cuda.empty_cache()
+    torch.cuda.empty_cache()  # Liberar memoria GPU
