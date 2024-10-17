@@ -117,12 +117,14 @@ class CustomCNN(nn.Module):
         self.inception_5x5 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=5, padding=2)
 
         # Segunda capa convolucional
-        self.conv3 = nn.Conv2d(in_channels=96, out_channels=128, kernel_size=3, padding=1)  # 96 canales = 32 + 32 + 32
+        self.conv3 = nn.Conv2d(in_channels=96, out_channels=128, kernel_size=3, padding=1)
         self.conv4 = nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1)
         
-        # Capa totalmente conectada
-        self.fc1 = nn.Linear(256 * 7 * 7, 512)
-        self.fc2 = nn.Linear(512, num_classes)
+        # Capa totalmente conectada (se inicializa en forward)
+        self.fc1 = None
+        self.fc2 = None
+        
+        self.num_classes = num_classes
         
     def forward(self, x):
         # Primera capa convolucional + pooling + dropout
@@ -137,7 +139,7 @@ class CustomCNN(nn.Module):
         x_5x5 = F.relu(self.inception_5x5(x_1x1))
         
         # Concatenación de los filtros de inception
-        inception_output = torch.cat([x_1x1, x_3x3, x_5x5], dim=1)  # 96 canales de salida
+        inception_output = torch.cat([x_1x1, x_3x3, x_5x5], dim=1)
         
         # Segunda capa convolucional + pooling + dropout
         x = F.relu(self.conv3(inception_output))
@@ -145,10 +147,15 @@ class CustomCNN(nn.Module):
         x = self.pool(x)
         x = self.dropout(x)
         
-        # Aplanar
-        x = x.view(-1, 256 * 7 * 7)
+        # Aplanar y ajustar dinámicamente la capa fc1
+        x = x.view(x.size(0), -1)
         
-        # Capas totalmente conectadas
+        # Inicialización de fc1 y fc2 en función de la salida aplanada
+        if self.fc1 is None:
+            self.fc1 = nn.Linear(x.size(1), 512).to(x.device)
+            self.fc2 = nn.Linear(512, self.num_classes).to(x.device)
+        
+        # Pasar por capas totalmente conectadas
         x = F.relu(self.fc1(x))
         x = self.dropout(x)
         x = self.fc2(x)
