@@ -29,11 +29,21 @@ model_a = model_a.to(device)
 # Hiperparámetros y configuración de entrenamiento
 batch_size = 4
 learning_rate = 0.001
-num_epochs = 1
+num_epochs = 2
 scaler = GradScaler()
 
-# Transformaciones comunes a todos los datasets
-transform = transforms.Compose([
+# Transformaciones con Data Augmentation para el conjunto de entrenamiento
+train_transform = transforms.Compose([
+    transforms.Resize((96, 96)),
+    transforms.RandomRotation(15),  # Rotación aleatoria
+    transforms.RandomHorizontalFlip(),  # Inversión horizontal aleatoria
+    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),  # Ajuste de color aleatorio
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+])
+
+# Transformación básica sin Data Augmentation para validación
+val_transform = transforms.Compose([
     transforms.Resize((96, 96)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
@@ -84,15 +94,15 @@ if not os.path.exists(canny_data_dir):
     apply_canny_filter(train_dataset_path, canny_data_dir)
 
 # Crear los loaders de los tres conjuntos de datos
-train_raw_dataset = ImageFolder(root=raw_data_dir, transform=transform)
-train_bilateral_dataset = ImageFolder(root=bilateral_data_dir, transform=transform)
-train_canny_dataset = ImageFolder(root=canny_data_dir, transform=transform)
+train_raw_dataset = ImageFolder(root=raw_data_dir, transform=train_transform)
+train_bilateral_dataset = ImageFolder(root=bilateral_data_dir, transform=train_transform)
+train_canny_dataset = ImageFolder(root=canny_data_dir, transform=train_transform)
 
 train_raw_loader = DataLoader(dataset=train_raw_dataset, batch_size=batch_size, shuffle=True)
 train_bilateral_loader = DataLoader(dataset=train_bilateral_dataset, batch_size=batch_size, shuffle=True)
 train_canny_loader = DataLoader(dataset=train_canny_dataset, batch_size=batch_size, shuffle=True)
 
-val_dataset = ImageFolder(root=val_dataset_path, transform=transform)
+val_dataset = ImageFolder(root=val_dataset_path, transform=val_transform)
 val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=False)
 
 # Definir la función de pérdida y el optimizador
