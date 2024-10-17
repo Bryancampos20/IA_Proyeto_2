@@ -28,13 +28,13 @@ model_a.fc = nn.Linear(num_features, 3)
 model_a = model_a.to(device)
 
 # Hiperparámetros y configuración de entrenamiento
-batch_size = 16  # Reducido a 16 para mejorar el uso de memoria
+batch_size = 4  # Reducido a 16 para mejorar el uso de memoria
 learning_rate = 0.001
-num_epochs = 10
+num_epochs = 2
 
 # Transformaciones y Aumento de Datos
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.Resize((96, 96)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
@@ -66,6 +66,10 @@ def train(model, train_loader, criterion, optimizer, device):
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
+
+        # Liberar memoria después de cada batch
+        torch.cuda.synchronize()
+        torch.cuda.empty_cache()
         
         running_loss += loss.item()
     
@@ -101,6 +105,7 @@ for epoch in range(num_epochs):
           f"Train Loss: {train_loss:.4f}, "
           f"Val Loss: {val_loss:.4f}, "
           f"Val Accuracy: {val_accuracy:.4f}")
+    torch.cuda.synchronize()
     torch.cuda.empty_cache()  # Liberar memoria GPU
 
 # Modelo B: Diseño propio de CNN con módulo Inception
@@ -178,4 +183,5 @@ for epoch in range(num_epochs):
           f"Train Loss: {train_loss:.4f}, "
           f"Val Loss: {val_loss:.4f}, "
           f"Val Accuracy: {val_accuracy:.4f}")
+    torch.cuda.synchronize()
     torch.cuda.empty_cache()  # Liberar memoria GPU
