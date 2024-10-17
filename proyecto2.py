@@ -17,13 +17,13 @@ val_dataset_path = os.getenv("VAL_DATASET_PATH")
 # Verificación de la disponibilidad de GPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Cargar ResNet50 preentrenado
-model = models.resnet50(pretrained=True)
+# Modelo A: Cargar ResNet50 preentrenado
+model_a = models.resnet50(pretrained=True)
 
 # Ajustar la última capa para adaptarse a 3 clases
-num_features = model.fc.in_features
-model.fc = nn.Linear(num_features, 3)
-model = model.to(device)
+num_features = model_a.fc.in_features
+model_a.fc = nn.Linear(num_features, 3)
+model_a = model_a.to(device)
 
 # Hiperparámetros y configuración de entrenamiento
 batch_size = 32
@@ -46,7 +46,7 @@ val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=Fals
 
 # Definir la función de pérdida y el optimizador
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+optimizer_a = torch.optim.Adam(model_a.parameters(), lr=learning_rate)
 
 # Función de entrenamiento
 def train(model, train_loader, criterion, optimizer, device):
@@ -89,12 +89,78 @@ def validate(model, val_loader, criterion, device):
     accuracy = correct_predictions / len(val_loader.dataset)
     return running_loss / len(val_loader), accuracy
 
-# Loop de entrenamiento y validación
+# Loop de entrenamiento y validación para Modelo A
 for epoch in range(num_epochs):
-    train_loss = train(model, train_loader, criterion, optimizer, device)
-    val_loss, val_accuracy = validate(model, val_loader, criterion, device)
+    train_loss = train(model_a, train_loader, criterion, optimizer_a, device)
+    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
     
-    print(f"Epoch [{epoch+1}/{num_epochs}], "
+    print(f"Modelo A - Epoch [{epoch+1}/{num_epochs}], "
+          f"Train Loss: {train_loss:.4f}, "
+          f"Val Loss: {val_loss:.4f}, "
+          f"Val Accuracy: {val_accuracy:.4f}")
+
+# Modelo B: Diseño propio de CNN con módulo Inception
+class CustomCNN(nn.Module):
+    def __init__(self, num_classes=3):
+        super(CustomCNN, self).__init__()
+        
+        # Primera capa convolucional
+        self.conv1 = nn.Conv2d(in_channels=3, out_channels=32, kernel_size=3, padding=1)
+        self.conv2 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.dropout = nn.Dropout(0.3)
+        
+        # Módulo Inception personalizado
+        self.inception = nn.Sequential(
+            nn.Conv2d(in_channels=64, out_channels=32, kernel_size=1),
+            nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1),
+            nn.Conv2d(in_channels=64, out_channels=128, kernel_size=5, padding=2)
+        )
+
+        # Segunda capa convolucional
+        self.conv3 = nn.Conv2d(in_channels=128, out_channels=128, kernel_size=3, padding=1)
+        self.conv4 = nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1)
+        
+        # Capa totalmente conectada
+        self.fc1 = nn.Linear(256 * 7 * 7, 512)
+        self.fc2 = nn.Linear(512, num_classes)
+        
+    def forward(self, x):
+        # Primera capa convolucional + pooling + dropout
+        x = F.relu(self.conv1(x))
+        x = F.relu(self.conv2(x))
+        x = self.pool(x)
+        x = self.dropout(x)
+        
+        # Módulo inception
+        inception_output = self.inception(x)
+        
+        # Segunda capa convolucional + pooling + dropout
+        x = F.relu(self.conv3(inception_output))
+        x = F.relu(self.conv4(x))
+        x = self.pool(x)
+        x = self.dropout(x)
+        
+        # Aplanar
+        x = x.view(-1, 256 * 7 * 7)
+        
+        # Capas totalmente conectadas
+        x = F.relu(self.fc1(x))
+        x = self.dropout(x)
+        x = self.fc2(x)
+        
+        return x
+
+# Inicialización del Modelo B
+model_b = CustomCNN(num_classes=3).to(device)
+optimizer_b = torch.optim.Adam(model_b.parameters(), lr=learning_rate)
+
+# Loop de entrenamiento y validación para Modelo B
+for epoch in range(num_epochs):
+    train_loss = train(model_b, train_loader, criterion, optimizer_b, device)
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+    
+    print(f"Modelo B - Epoch [{epoch+1}/{num_epochs}], "
           f"Train Loss: {train_loss:.4f}, "
           f"Val Loss: {val_loss:.4f}, "
           f"Val Accuracy: {val_accuracy:.4f}")
