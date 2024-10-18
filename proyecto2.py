@@ -15,7 +15,6 @@ import wandb
 load_dotenv()
 
 # Inicialización de WandB
-
 wandb.init(
     # set the wandb project where this run will be logged
     project="model_comparison",
@@ -25,7 +24,7 @@ wandb.init(
     "learning_rate": 0.02,
     "architecture": "CNN",
     "dataset": "CIFAR-100",
-    "epochs": 2,
+    "epochs": 10,
     }
 )
 
@@ -139,79 +138,67 @@ train_canny_loader = DataLoader(dataset=train_canny_dataset, batch_size=batch_si
 val_dataset = ImageFolder(root=val_dataset_path, transform=val_transform)
 val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=False)
 
-# Definir la función de pérdida y el optimizador
+# Definir la función de pérdida
 criterion = nn.CrossEntropyLoss()
 
-# Función de entrenamiento con precisión mixta
-def train(model, train_loader, criterion, optimizer, device):
+# Función de entrenamiento con WandB
+def train(model, train_loader, criterion, optimizer, device, model_name, dataset_name, epoch):
     model.train()
     running_loss = 0.0
     for images, labels in train_loader:
         images, labels = images.to(device), labels.to(device)
-        
+
         optimizer.zero_grad()
         with autocast():
             outputs = model(images)
             loss = criterion(outputs, labels)
-        
+
         scaler.scale(loss).backward()
         scaler.step(optimizer)
         scaler.update()
 
         running_loss += loss.item()
-    
-    return running_loss / len(train_loader)
 
-# Función de validación
-def validate(model, val_loader, criterion, device):
+    average_loss = running_loss / len(train_loader)
+    wandb.log({f"{model_name}_{dataset_name}_train_loss": average_loss, 'epoch': epoch})
+    return average_loss
+
+# Función de validación con WandB
+def validate(model, val_loader, criterion, device, model_name, dataset_name, epoch):
     model.eval()
     running_loss = 0.0
     correct_predictions = 0
-    
+
     with torch.no_grad():
         for images, labels in val_loader:
             images, labels = images.to(device), labels.to(device)
             outputs = model(images)
             loss = criterion(outputs, labels)
             running_loss += loss.item()
-            
+
             _, predicted = torch.max(outputs, 1)
             correct_predictions += (predicted == labels).sum().item()
-    
+
     accuracy = correct_predictions / len(val_loader.dataset)
-    return running_loss / len(val_loader), accuracy
+    average_loss = running_loss / len(val_loader)
+    wandb.log({
+        f"{model_name}_{dataset_name}_val_loss": average_loss,
+        f"{model_name}_{dataset_name}_val_accuracy": accuracy,
+        'epoch': epoch
+    })
+    return average_loss, accuracy
 
-# Loop de entrenamiento y validación para Modelo A en los tres conjuntos de datos
-optimizer_a = torch.optim.Adam(model_a.parameters(), lr=learning_rate)
-for epoch in range(num_epochs):
-    print(f"\n--- Epoch [{epoch+1}/{num_epochs}] ---")
-    
-    # Entrenamiento y validación en dataset crudo
-    train_loss = train(model_a, train_raw_loader, criterion, optimizer_a, device)
-    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
-    print(f"Modelo A - Raw Data - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
-
-    # Entrenamiento y validación en dataset bilateral
-    train_loss = train(model_a, train_bilateral_loader, criterion, optimizer_a, device)
-    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
-    print(f"Modelo A - Bilateral Filter - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
-
-    # Entrenamiento y validación en dataset canny
-    train_loss = train(model_a, train_canny_loader, criterion, optimizer_a, device)
-    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device)
-    print(f"Modelo A - Canny Edge - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
-
-# Modelo B: Diseño propio de CNN con módulo Inception
+# Definir la clase CustomCNN antes de usar model_b
 class CustomCNN(nn.Module):
     def __init__(self, num_classes=3):
         super(CustomCNN, self).__init__()
-        
+
         # Primera capa convolucional
         self.conv1 = nn.Conv2d(in_channels=3, out_channels=32, kernel_size=3, padding=1)
         self.conv2 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
         self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
         self.dropout = nn.Dropout(0.3)
-        
+
         # Módulo Inception personalizado
         self.inception_1x1 = nn.Conv2d(in_channels=64, out_channels=32, kernel_size=1)
         self.inception_3x3 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1)
@@ -220,64 +207,80 @@ class CustomCNN(nn.Module):
         # Segunda capa convolucional
         self.conv3 = nn.Conv2d(in_channels=96, out_channels=128, kernel_size=3, padding=1)
         self.conv4 = nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1)
-        
+
         # Capas totalmente conectadas
         self.fc1 = None
         self.fc2 = None
         self.num_classes = num_classes
-        
+
     def forward(self, x):
         # Primera capa convolucional + pooling + dropout
         x = F.relu(self.conv1(x))
         x = F.relu(self.conv2(x))
         x = self.pool(x)
         x = self.dropout(x)
-        
+
         # Módulo inception
         x_1x1 = F.relu(self.inception_1x1(x))
         x_3x3 = F.relu(self.inception_3x3(x_1x1))
         x_5x5 = F.relu(self.inception_5x5(x_1x1))
-        
+
         # Concatenación de los filtros de inception
         inception_output = torch.cat([x_1x1, x_3x3, x_5x5], dim=1)
-        
+
         # Segunda capa convolucional + pooling + dropout
         x = F.relu(self.conv3(inception_output))
         x = F.relu(self.conv4(x))
         x = self.pool(x)
         x = self.dropout(x)
-        
+
         # Aplanar y pasar por capas totalmente conectadas
         x = x.view(x.size(0), -1)
         if self.fc1 is None:
             self.fc1 = nn.Linear(x.size(1), 512).to(x.device)
             self.fc2 = nn.Linear(512, self.num_classes).to(x.device)
-        
+
         x = F.relu(self.fc1(x))
         x = self.dropout(x)
         x = self.fc2(x)
-        
+
         return x
 
-# Inicialización del modelo B
+# Inicialización del modelo B y su optimizador
 model_b = CustomCNN(num_classes=3).to(device)
 optimizer_b = torch.optim.Adam(model_b.parameters(), lr=learning_rate)
 
-# Loop de entrenamiento y validación para Modelo B en los tres conjuntos de datos
-for epoch in range(num_epochs):
-    print(f"\n--- Epoch [{epoch+1}/{num_epochs}] ---")
-    
-    # Entrenamiento y validación en dataset crudo
-    train_loss = train(model_b, train_raw_loader, criterion, optimizer_b, device)
-    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+# Loop de entrenamiento y validación para Modelo A en los tres conjuntos de datos
+optimizer_a = torch.optim.Adam(model_a.parameters(), lr=learning_rate)
+for epoch in range(1, num_epochs + 1):
+    print(f"\n--- Epoch [{epoch}/{num_epochs}] ---")
+
+    # Entrenamiento y validación en dataset crudo para Modelo A
+    train_loss = train(model_a, train_raw_loader, criterion, optimizer_a, device, "Model_A", "Raw_Data", epoch)
+    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device, "Model_A", "Raw_Data", epoch)
+    print(f"Modelo A - Raw Data - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+    # Entrenamiento y validación en dataset bilateral para Modelo A
+    train_loss = train(model_a, train_bilateral_loader, criterion, optimizer_a, device, "Model_A", "Bilateral_Filter", epoch)
+    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device, "Model_A", "Bilateral_Filter", epoch)
+    print(f"Modelo A - Bilateral Filter - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+    # Entrenamiento y validación en dataset canny para Modelo A
+    train_loss = train(model_a, train_canny_loader, criterion, optimizer_a, device, "Model_A", "Canny_Edge", epoch)
+    val_loss, val_accuracy = validate(model_a, val_loader, criterion, device, "Model_A", "Canny_Edge", epoch)
+    print(f"Modelo A - Canny Edge - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+
+    # Entrenamiento y validación en dataset crudo para Modelo B
+    train_loss = train(model_b, train_raw_loader, criterion, optimizer_b, device, "Model_B", "Raw_Data", epoch)
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device, "Model_B", "Raw_Data", epoch)
     print(f"Modelo B - Raw Data - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
 
-    # Entrenamiento y validación en dataset bilateral
-    train_loss = train(model_b, train_bilateral_loader, criterion, optimizer_b, device)
-    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+    # Entrenamiento y validación en dataset bilateral para Modelo B
+    train_loss = train(model_b, train_bilateral_loader, criterion, optimizer_b, device, "Model_B", "Bilateral_Filter", epoch)
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device, "Model_B", "Bilateral_Filter", epoch)
     print(f"Modelo B - Bilateral Filter - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
 
-    # Entrenamiento y validación en dataset canny
-    train_loss = train(model_b, train_canny_loader, criterion, optimizer_b, device)
-    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device)
+    # Entrenamiento y validación en dataset canny para Modelo B
+    train_loss = train(model_b, train_canny_loader, criterion, optimizer_b, device, "Model_B", "Canny_Edge", epoch)
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device, "Model_B", "Canny_Edge", epoch)
     print(f"Modelo B - Canny Edge - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
