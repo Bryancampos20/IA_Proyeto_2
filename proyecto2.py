@@ -9,9 +9,13 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
 from torch.cuda.amp import autocast, GradScaler
+import wandb
 
 # Cargar las variables de entorno del archivo .env
 load_dotenv()
+
+# Inicialización de WandB
+wandb.init(project="model_comparison", entity="usuario") 
 
 # Obtener las rutas de los datasets desde las variables de entorno
 train_dataset_path = os.getenv("TRAIN_DATASET_PATH")
