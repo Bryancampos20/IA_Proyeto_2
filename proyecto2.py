@@ -21,7 +21,7 @@ val_dataset_path = os.getenv("VAL_DATASET_PATH")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Modelo A: Cargar ResNet50 preentrenado
-model_a = models.resnet50(pretrained=True)
+model_a = models.resnet50(weights=models.ResNet50_Weights.IMAGENET1K_V1)
 num_features = model_a.fc.in_features
 model_a.fc = nn.Linear(num_features, 3)
 model_a = model_a.to(device)
@@ -35,9 +35,9 @@ scaler = GradScaler()
 # Transformaciones con Data Augmentation para el conjunto de entrenamiento
 train_transform = transforms.Compose([
     transforms.Resize((96, 96)),
-    transforms.RandomRotation(15),  # Rotación aleatoria
-    transforms.RandomHorizontalFlip(),  # Inversión horizontal aleatoria
-    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),  # Ajuste de color aleatorio
+    transforms.RandomRotation(15),
+    transforms.RandomHorizontalFlip(),
+    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
@@ -49,28 +49,52 @@ val_transform = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
-# Funciones de preprocesamiento de imágenes
+# Funciones de preprocesamiento de imágenes manteniendo la estructura de clases
+def copy_images_with_class_structure(input_dir, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    for root, dirs, _ in os.walk(input_dir):
+        for class_folder in dirs:
+            class_input_path = os.path.join(input_dir, class_folder)
+            class_output_path = os.path.join(output_dir, class_folder)
+            os.makedirs(class_output_path, exist_ok=True)
+
+            for file in os.listdir(class_input_path):
+                if file.endswith(('png', 'jpg', 'jpeg')):
+                    img_path = os.path.join(class_input_path, file)
+                    save_path = os.path.join(class_output_path, file)
+                    cv2.imwrite(save_path, cv2.imread(img_path))
+
 def apply_bilateral_filter(input_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
-    for root, _, files in os.walk(input_dir):
-        for file in files:
-            if file.endswith(('png', 'jpg', 'jpeg')):
-                img_path = os.path.join(root, file)
-                img = cv2.imread(img_path)
-                filtered_img = cv2.bilateralFilter(img, 9, 75, 75)
-                save_path = os.path.join(output_dir, file)
-                cv2.imwrite(save_path, filtered_img)
+    for root, dirs, _ in os.walk(input_dir):
+        for class_folder in dirs:
+            class_input_path = os.path.join(input_dir, class_folder)
+            class_output_path = os.path.join(output_dir, class_folder)
+            os.makedirs(class_output_path, exist_ok=True)
+
+            for file in os.listdir(class_input_path):
+                if file.endswith(('png', 'jpg', 'jpeg')):
+                    img_path = os.path.join(class_input_path, file)
+                    img = cv2.imread(img_path)
+                    filtered_img = cv2.bilateralFilter(img, 9, 75, 75)
+                    save_path = os.path.join(class_output_path, file)
+                    cv2.imwrite(save_path, filtered_img)
 
 def apply_canny_filter(input_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
-    for root, _, files in os.walk(input_dir):
-        for file in files:
-            if file.endswith(('png', 'jpg', 'jpeg')):
-                img_path = os.path.join(root, file)
-                img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
-                filtered_img = cv2.Canny(img, 100, 200)
-                save_path = os.path.join(output_dir, file)
-                cv2.imwrite(save_path, filtered_img)
+    for root, dirs, _ in os.walk(input_dir):
+        for class_folder in dirs:
+            class_input_path = os.path.join(input_dir, class_folder)
+            class_output_path = os.path.join(output_dir, class_folder)
+            os.makedirs(class_output_path, exist_ok=True)
+
+            for file in os.listdir(class_input_path):
+                if file.endswith(('png', 'jpg', 'jpeg')):
+                    img_path = os.path.join(class_input_path, file)
+                    img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+                    filtered_img = cv2.Canny(img, 100, 200)
+                    save_path = os.path.join(class_output_path, file)
+                    cv2.imwrite(save_path, filtered_img)
 
 # Crear datasets preprocesados si no existen
 processed_dir = "processed_datasets"
@@ -79,13 +103,7 @@ bilateral_data_dir = os.path.join(processed_dir, "bilateral")
 canny_data_dir = os.path.join(processed_dir, "canny")
 
 if not os.path.exists(raw_data_dir):
-    os.makedirs(raw_data_dir, exist_ok=True)
-    for root, _, files in os.walk(train_dataset_path):
-        for file in files:
-            if file.endswith(('png', 'jpg', 'jpeg')):
-                img_path = os.path.join(root, file)
-                save_path = os.path.join(raw_data_dir, file)
-                cv2.imwrite(save_path, cv2.imread(img_path))
+    copy_images_with_class_structure(train_dataset_path, raw_data_dir)
 
 if not os.path.exists(bilateral_data_dir):
     apply_bilateral_filter(train_dataset_path, bilateral_data_dir)
