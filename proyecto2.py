@@ -15,7 +15,19 @@ import wandb
 load_dotenv()
 
 # Inicialización de WandB
-wandb.init(project="model_comparison", entity="usuario") 
+
+wandb.init(
+    # set the wandb project where this run will be logged
+    project="model_comparison",
+
+    # track hyperparameters and run metadata
+    config={
+    "learning_rate": 0.02,
+    "architecture": "CNN",
+    "dataset": "CIFAR-100",
+    "epochs": 2,
+    }
+)
 
 # Obtener las rutas de los datasets desde las variables de entorno
 train_dataset_path = os.getenv("TRAIN_DATASET_PATH")
