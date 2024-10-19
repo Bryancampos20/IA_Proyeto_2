@@ -1,0 +1,28 @@
+2024-10-19 14:14:46,737 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-10-19 14:14:46,737 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Configure stats pid to 30628
+2024-10-19 14:14:46,738 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Loading settings from /home/miguel/.config/wandb/settings
+2024-10-19 14:14:46,738 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Loading settings from /home/miguel/Desktop/IA_Proyeto_2/wandb/settings
+2024-10-19 14:14:46,738 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-10-19 14:14:46,738 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-10-19 14:14:46,738 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'proyecto2.py', 'program_abspath': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py', 'program': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py'}
+2024-10-19 14:14:46,738 INFO    MainThread:30628 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-10-19 14:14:46,739 INFO    MainThread:30628 [wandb_init.py:_log_setup():529] Logging user logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_141446-tplee5op/logs/debug.log
+2024-10-19 14:14:46,739 INFO    MainThread:30628 [wandb_init.py:_log_setup():530] Logging internal logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_141446-tplee5op/logs/debug-internal.log
+2024-10-19 14:14:46,739 INFO    MainThread:30628 [wandb_init.py:init():569] calling init triggers
+2024-10-19 14:14:46,739 INFO    MainThread:30628 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'batch_size': 4, 'num_epochs': 5, 'architecture_A': 'ResNet50', 'architecture_B': 'CustomCNN', 'dataset': 'ImageFolder'}
+2024-10-19 14:14:46,739 INFO    MainThread:30628 [wandb_init.py:init():619] starting backend
+2024-10-19 14:14:46,740 INFO    MainThread:30628 [wandb_init.py:init():623] setting up manager
+2024-10-19 14:14:46,745 INFO    MainThread:30628 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-10-19 14:14:46,746 INFO    MainThread:30628 [wandb_init.py:init():631] backend started and connected
+2024-10-19 14:14:46,759 INFO    MainThread:30628 [wandb_init.py:init():720] updated telemetry
+2024-10-19 14:14:46,763 INFO    MainThread:30628 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-10-19 14:14:47,059 ERROR   MainThread:30628 [wandb_init.py:init():779] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2024-10-19 14:14:47,060 ERROR   MainThread:30628 [wandb_init.py:init():1191] error in wandb.init()
+Traceback (most recent call last):
+  File "/home/miguel/.local/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1181, in init
+    return wi.init()
+  File "/home/miguel/.local/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2024-10-19 14:14:48,380 WARNING MsgRouterThr:30628 [router.py:message_loop():77] message_loop has been closed

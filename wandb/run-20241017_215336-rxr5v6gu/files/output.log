@@ -1,0 +1,18 @@
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:48: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:152: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+--- Epoch [1/2] ---
+Modelo A - Raw Data - Train Loss: 1.1364, Val Loss: 1.2539, Val Accuracy: 0.7121
+Modelo A - Bilateral Filter - Train Loss: 0.7970, Val Loss: 0.6578, Val Accuracy: 0.6364
+Modelo A - Canny Edge - Train Loss: 1.0311, Val Loss: 22.9556, Val Accuracy: 0.3939
+Modelo B - Raw Data - Train Loss: 0.9755, Val Loss: 0.7934, Val Accuracy: 0.7273
+Modelo B - Bilateral Filter - Train Loss: 0.8429, Val Loss: 0.5675, Val Accuracy: 0.7727
+Modelo B - Canny Edge - Train Loss: 1.1252, Val Loss: 1.2191, Val Accuracy: 0.4242
+--- Epoch [2/2] ---
+Modelo A - Raw Data - Train Loss: 0.7482, Val Loss: 0.5709, Val Accuracy: 0.6515
+Modelo A - Bilateral Filter - Train Loss: 0.6641, Val Loss: 0.3803, Val Accuracy: 0.8333
+Modelo A - Canny Edge - Train Loss: 0.8991, Val Loss: 48.3935, Val Accuracy: 0.3939
+Modelo B - Raw Data - Train Loss: 0.8896, Val Loss: 0.7267, Val Accuracy: 0.7424
+Modelo B - Bilateral Filter - Train Loss: 0.7810, Val Loss: 0.6320, Val Accuracy: 0.7576
+Modelo B - Canny Edge - Train Loss: 1.1499, Val Loss: 0.8195, Val Accuracy: 0.7424

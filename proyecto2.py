@@ -10,6 +10,9 @@ from torch.utils.data import DataLoader
 import torch.nn.functional as F
 from torch.cuda.amp import autocast, GradScaler
 import wandb
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import matplotlib.pyplot as plt
+import numpy as np
 
 # Cargar las variables de entorno del archivo .env
 load_dotenv()
@@ -18,13 +21,14 @@ load_dotenv()
 wandb.init(
     # set the wandb project where this run will be logged
     project="model_comparison",
-
-    # track hyperparameters and run metadata
-    config={
-    "learning_rate": 0.02,
-    "architecture": "CNN",
-    "dataset": "CIFAR-100",
-    "epochs": 10,
+    name="comparison_run_modelA_modelB",  # Nombre personalizado de la ejecución
+    config={                           # Configuraciones e hiperparámetros
+        "learning_rate": 0.001,
+        "batch_size": 16,
+        "num_epochs": 5,
+        "architecture_A": "ResNet50",
+        "architecture_B": "CustomCNN",
+        "dataset": "ImageFolder"
     }
 )
 
@@ -42,24 +46,24 @@ model_a.fc = nn.Linear(num_features, 3)
 model_a = model_a.to(device)
 
 # Hiperparámetros y configuración de entrenamiento
-batch_size = 4
+batch_size = 16
 learning_rate = 0.001
-num_epochs = 2
+num_epochs = 5
 scaler = GradScaler()
 
 # Transformaciones con Data Augmentation para el conjunto de entrenamiento
 train_transform = transforms.Compose([
-    transforms.Resize((96, 96)),
+    transforms.Resize((128, 128)),
     transforms.RandomRotation(15),
     transforms.RandomHorizontalFlip(),
-    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
+
 # Transformación básica sin Data Augmentation para validación
 val_transform = transforms.Compose([
-    transforms.Resize((96, 96)),
+    transforms.Resize((128, 128)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
@@ -194,19 +198,19 @@ class CustomCNN(nn.Module):
         super(CustomCNN, self).__init__()
 
         # Primera capa convolucional
-        self.conv1 = nn.Conv2d(in_channels=3, out_channels=32, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
-        self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv1 = nn.Conv2d(in_channels=3, out_channels=16, kernel_size=3, padding=1, stride=2)
+        self.conv2 = nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, padding=1)
+        self.pool = nn.MaxPool2d(kernel_size=3, stride=3)  # Cambiado a 3x3 para reducir más rápido
         self.dropout = nn.Dropout(0.3)
 
         # Módulo Inception personalizado
-        self.inception_1x1 = nn.Conv2d(in_channels=64, out_channels=32, kernel_size=1)
-        self.inception_3x3 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=3, padding=1)
-        self.inception_5x5 = nn.Conv2d(in_channels=32, out_channels=32, kernel_size=5, padding=2)
+        self.inception_1x1 = nn.Conv2d(in_channels=32, out_channels=16, kernel_size=1)
+        self.inception_3x3 = nn.Conv2d(in_channels=16, out_channels=16, kernel_size=3, padding=1)
+        self.inception_5x5 = nn.Conv2d(in_channels=16, out_channels=16, kernel_size=5, padding=2)
 
         # Segunda capa convolucional
-        self.conv3 = nn.Conv2d(in_channels=96, out_channels=128, kernel_size=3, padding=1)
-        self.conv4 = nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1)
+        self.conv3 = nn.Conv2d(in_channels=48, out_channels=64, kernel_size=3, padding=1)
+        self.conv4 = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, padding=1)
 
         # Capas totalmente conectadas
         self.fc1 = None
@@ -237,8 +241,8 @@ class CustomCNN(nn.Module):
         # Aplanar y pasar por capas totalmente conectadas
         x = x.view(x.size(0), -1)
         if self.fc1 is None:
-            self.fc1 = nn.Linear(x.size(1), 512).to(x.device)
-            self.fc2 = nn.Linear(512, self.num_classes).to(x.device)
+            self.fc1 = nn.Linear(x.size(1), 256).to(x.device)  # Reducido a 256
+            self.fc2 = nn.Linear(256, self.num_classes).to(x.device)
 
         x = F.relu(self.fc1(x))
         x = self.dropout(x)

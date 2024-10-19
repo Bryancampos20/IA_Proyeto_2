@@ -1,0 +1,1 @@
+{"Model_A_Raw_Data_train_loss": 1.1664452715998603, "epoch": 1, "_timestamp": 1729367779.4683373, "_runtime": 18.571540355682373, "_step": 1, "Model_A_Raw_Data_val_loss": 1.0170817735659725, "Model_A_Raw_Data_val_accuracy": 0.696969696969697, "_wandb": {"runtime": 22}}

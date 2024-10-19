@@ -1,0 +1,44 @@
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:49: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:153: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+--- Epoch [1/5] ---
+Modelo A - Raw Data - Train Loss: 1.1108, Val Loss: 17.5659, Val Accuracy: 0.5606
+Modelo A - Bilateral Filter - Train Loss: 0.4537, Val Loss: 1.0426, Val Accuracy: 0.6970
+Modelo A - Canny Edge - Train Loss: 0.9533, Val Loss: 3.4856, Val Accuracy: 0.4091
+Traceback (most recent call last):
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 276, in <module>
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device, "Model_B", "Raw_Data", epoch)
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 176, in validate
+    outputs = model(images)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 244, in forward
+    x = F.relu(self.fc1(x))
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (16x73728 and 131072x256)
+Traceback (most recent call last):
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 276, in <module>
+    val_loss, val_accuracy = validate(model_b, val_loader, criterion, device, "Model_B", "Raw_Data", epoch)
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 176, in validate
+    outputs = model(images)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 244, in forward
+    x = F.relu(self.fc1(x))
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (16x73728 and 131072x256)

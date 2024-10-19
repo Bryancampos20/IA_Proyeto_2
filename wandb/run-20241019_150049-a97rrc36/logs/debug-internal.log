@@ -1,0 +1,135 @@
+2024-10-19 15:00:49,833 INFO    StreamThr :49941 [internal.py:wandb_internal():85] W&B internal server running at pid: 49941, started at: 2024-10-19 15:00:49.832877
+2024-10-19 15:00:49,835 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status
+2024-10-19 15:00:49,837 INFO    WriterThread:49941 [datastore.py:open_for_write():87] open: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/run-a97rrc36.wandb
+2024-10-19 15:00:49,840 DEBUG   SenderThread:49941 [sender.py:send():379] send: header
+2024-10-19 15:00:49,845 DEBUG   SenderThread:49941 [sender.py:send():379] send: run
+2024-10-19 15:00:50,259 INFO    SenderThread:49941 [dir_watcher.py:__init__():211] watching files in: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/files
+2024-10-19 15:00:50,259 INFO    SenderThread:49941 [sender.py:_start_run_threads():1188] run started: a97rrc36 with start time 1729371649.833067
+2024-10-19 15:00:50,276 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: check_version
+2024-10-19 15:00:50,277 DEBUG   SenderThread:49941 [sender.py:send_request():406] send_request: check_version
+2024-10-19 15:00:50,721 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: run_start
+2024-10-19 15:00:50,736 DEBUG   HandlerThread:49941 [system_info.py:__init__():26] System info init
+2024-10-19 15:00:50,736 DEBUG   HandlerThread:49941 [system_info.py:__init__():41] System info init done
+2024-10-19 15:00:50,736 INFO    HandlerThread:49941 [system_monitor.py:start():194] Starting system monitor
+2024-10-19 15:00:50,736 INFO    SystemMonitor:49941 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-10-19 15:00:50,736 INFO    HandlerThread:49941 [system_monitor.py:probe():214] Collecting system info
+2024-10-19 15:00:50,736 INFO    SystemMonitor:49941 [interfaces.py:start():188] Started cpu monitoring
+2024-10-19 15:00:50,738 INFO    SystemMonitor:49941 [interfaces.py:start():188] Started disk monitoring
+2024-10-19 15:00:50,738 INFO    SystemMonitor:49941 [interfaces.py:start():188] Started gpu monitoring
+2024-10-19 15:00:50,739 INFO    SystemMonitor:49941 [interfaces.py:start():188] Started memory monitoring
+2024-10-19 15:00:50,740 INFO    SystemMonitor:49941 [interfaces.py:start():188] Started network monitoring
+2024-10-19 15:00:50,745 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:50,746 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:50,749 DEBUG   HandlerThread:49941 [system_info.py:probe():152] Probing system
+2024-10-19 15:00:50,751 DEBUG   HandlerThread:49941 [system_info.py:_probe_git():137] Probing git
+2024-10-19 15:00:50,756 DEBUG   HandlerThread:49941 [system_info.py:_probe_git():145] Probing git done
+2024-10-19 15:00:50,756 DEBUG   HandlerThread:49941 [system_info.py:probe():200] Probing system done
+2024-10-19 15:00:50,756 DEBUG   HandlerThread:49941 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-47-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-10-19T21:00:50.749543', 'startedAt': '2024-10-19T21:00:49.826640', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py', 'codePathLocal': 'proyecto2.py', 'codePath': 'proyecto2.py', 'git': {'remote': 'https://github.com/Bryancampos20/IA_Proyeto_2.git', 'commit': '9a399b7c03ea59fc1617aa89574fabd307774597'}, 'email': 'miguelsanchez712000@estudiantec.cr', 'root': '/home/miguel/Desktop/IA_Proyeto_2', 'host': 'miguel-pc', 'username': 'miguel', 'executable': '/usr/bin/python3', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3200.1256249999997, 'min': 800.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 3600.0, 'min': 800.0, 'max': 4000.0}, {'current': 3599.922, 'min': 800.0, 'max': 4000.0}, {'current': 3599.751, 'min': 800.0, 'max': 4000.0}, {'current': 3601.312, 'min': 800.0, 'max': 4000.0}, {'current': 3601.156, 'min': 800.0, 'max': 4000.0}, {'current': 3601.727, 'min': 800.0, 'max': 4000.0}, {'current': 3601.157, 'min': 800.0, 'max': 4000.0}, {'current': 3600.395, 'min': 800.0, 'max': 4000.0}], 'disk': {'/': {'total': 218.50913619995117, 'used': 113.33433532714844}}, 'gpu': 'NVIDIA GeForce GTX 1050', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1050', 'memory_total': 4294967296}], 'memory': {'total': 19.3944091796875}}
+2024-10-19 15:00:50,756 INFO    HandlerThread:49941 [system_monitor.py:probe():224] Finished collecting system info
+2024-10-19 15:00:50,756 INFO    HandlerThread:49941 [system_monitor.py:probe():227] Publishing system info
+2024-10-19 15:00:50,756 INFO    HandlerThread:49941 [system_monitor.py:probe():229] Finished publishing system info
+2024-10-19 15:00:50,760 DEBUG   SenderThread:49941 [sender.py:send():379] send: files
+2024-10-19 15:00:50,760 INFO    SenderThread:49941 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-10-19 15:00:50,981 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: python_packages
+2024-10-19 15:00:50,981 DEBUG   SenderThread:49941 [sender.py:send_request():406] send_request: python_packages
+2024-10-19 15:00:50,981 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 15:00:50,982 DEBUG   SenderThread:49941 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 15:00:50,984 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:51,260 INFO    Thread-12 :49941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/files/wandb-metadata.json
+2024-10-19 15:00:51,260 INFO    Thread-12 :49941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/files/requirements.txt
+2024-10-19 15:00:51,311 DEBUG   SenderThread:49941 [sender.py:send():379] send: telemetry
+2024-10-19 15:00:51,408 INFO    wandb-upload_0:49941 [upload_job.py:push():130] Uploaded file /tmp/tmpp8dbugbkwandb/o52rdvph-wandb-metadata.json
+2024-10-19 15:00:51,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:52,259 INFO    Thread-12 :49941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/files/output.log
+2024-10-19 15:00:52,746 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:52,746 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:52,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:53,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:54,260 INFO    Thread-12 :49941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/files/output.log
+2024-10-19 15:00:54,747 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:54,747 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:54,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:55,537 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:00:55,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:56,748 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:56,748 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:56,983 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:57,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:58,749 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:58,749 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:00:58,983 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:00:59,990 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:01:00,752 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:00,752 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:00,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:00,985 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:01:01,985 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:01:02,754 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:02,754 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:02,986 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:01:03,986 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:01:04,755 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:04,756 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:04,986 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:01:05,107 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 15:01:05,109 DEBUG   SenderThread:49941 [sender.py:send():379] send: history
+2024-10-19 15:01:05,110 DEBUG   SenderThread:49941 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 15:01:05,113 INFO    SenderThread:49941 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 15:01:05,266 INFO    Thread-12 :49941 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/files/wandb-summary.json
+2024-10-19 15:01:05,982 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 15:01:05,983 DEBUG   SenderThread:49941 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 15:01:05,987 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:01:06,135 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:06,757 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:06,757 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:08,757 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:08,758 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:10,758 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:10,759 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:11,135 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:12,759 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:12,759 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:14,761 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:14,762 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:16,136 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:16,762 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:16,763 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:18,763 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:18,763 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:20,809 ERROR   gpu       :49941 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 15:01:20,809 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:20,809 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:21,142 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:22,272 INFO    Thread-12 :49941 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_150049-a97rrc36/files/config.yaml
+2024-10-19 15:01:22,810 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:22,811 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:24,811 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:24,811 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:26,280 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:26,812 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:26,812 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:28,812 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:28,813 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:30,813 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:30,813 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:31,281 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:32,814 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:32,814 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:34,821 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:34,821 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:36,285 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:36,822 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:36,822 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:38,823 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:38,823 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:40,824 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:40,824 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:41,286 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:42,825 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:42,825 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:44,825 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:44,825 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:46,287 DEBUG   HandlerThread:49941 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:01:46,826 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:46,826 ERROR   gpu       :49941 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:01:48,746 INFO    MainThread:49941 [internal.py:handle_exit():75] Internal process exited

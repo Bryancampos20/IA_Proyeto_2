@@ -1,0 +1,58 @@
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:48: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:152: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+--- Epoch [1/2] ---
+Modelo A - Raw Data - Train Loss: 1.1664, Val Loss: 1.0171, Val Accuracy: 0.6970
+Traceback (most recent call last):
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 264, in <module>
+    train_loss = train(model_a, train_bilateral_loader, criterion, optimizer_a, device, "Model_A", "Bilateral_Filter", epoch)
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 148, in train
+    for images, labels in train_loader:
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/miguel/.local/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 245, in __getitem__
+    sample = self.loader(path)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 284, in default_loader
+    return pil_loader(path)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 264, in pil_loader
+    return img.convert("RGB")
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 889, in convert
+    self.load()
+  File "/usr/lib/python3/dist-packages/PIL/ImageFile.py", line 235, in load
+    s = read(self.decodermaxblock)
+  File "/usr/lib/python3/dist-packages/PIL/JpegImagePlugin.py", line 402, in load_read
+    s = self.fp.read(read_bytes)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 264, in <module>
+    train_loss = train(model_a, train_bilateral_loader, criterion, optimizer_a, device, "Model_A", "Bilateral_Filter", epoch)
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 148, in train
+    for images, labels in train_loader:
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/miguel/.local/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/miguel/.local/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 245, in __getitem__
+    sample = self.loader(path)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 284, in default_loader
+    return pil_loader(path)
+  File "/home/miguel/.local/lib/python3.10/site-packages/torchvision/datasets/folder.py", line 264, in pil_loader
+    return img.convert("RGB")
+  File "/usr/lib/python3/dist-packages/PIL/Image.py", line 889, in convert
+    self.load()
+  File "/usr/lib/python3/dist-packages/PIL/ImageFile.py", line 235, in load
+    s = read(self.decodermaxblock)
+  File "/usr/lib/python3/dist-packages/PIL/JpegImagePlugin.py", line 402, in load_read
+    s = self.fp.read(read_bytes)
+KeyboardInterrupt

@@ -1,0 +1,39 @@
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:49: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:153: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+--- Epoch [1/5] ---
+Modelo A - Raw Data - Train Loss: 0.9948, Val Loss: 9.7916, Val Accuracy: 0.5909
+Modelo A - Bilateral Filter - Train Loss: 0.5243, Val Loss: 2.4863, Val Accuracy: 0.6667
+Modelo A - Canny Edge - Train Loss: 0.9023, Val Loss: 101.5521, Val Accuracy: 0.3030
+Modelo B - Raw Data - Train Loss: 1.0915, Val Loss: 1.0903, Val Accuracy: 0.3939
+Modelo B - Bilateral Filter - Train Loss: 0.9603, Val Loss: 0.7207, Val Accuracy: 0.5909
+Modelo B - Canny Edge - Train Loss: 1.3928, Val Loss: 1.5729, Val Accuracy: 0.3939
+--- Epoch [2/5] ---
+Modelo A - Raw Data - Train Loss: 0.4944, Val Loss: 0.3164, Val Accuracy: 0.8636
+Modelo A - Bilateral Filter - Train Loss: 0.3924, Val Loss: 0.9520, Val Accuracy: 0.7273
+Modelo A - Canny Edge - Train Loss: 0.6897, Val Loss: 2.1025, Val Accuracy: 0.4848
+Modelo B - Raw Data - Train Loss: 1.0858, Val Loss: 0.9791, Val Accuracy: 0.6061
+Modelo B - Bilateral Filter - Train Loss: 0.9416, Val Loss: 0.8715, Val Accuracy: 0.5606
+Modelo B - Canny Edge - Train Loss: 1.0929, Val Loss: 0.9096, Val Accuracy: 0.5303
+--- Epoch [3/5] ---
+Modelo A - Raw Data - Train Loss: 0.4518, Val Loss: 0.5272, Val Accuracy: 0.7424
+Modelo A - Bilateral Filter - Train Loss: 0.2553, Val Loss: 0.4801, Val Accuracy: 0.7879
+Modelo A - Canny Edge - Train Loss: 0.4637, Val Loss: 2.4382, Val Accuracy: 0.3333
+Modelo B - Raw Data - Train Loss: 0.8488, Val Loss: 0.7963, Val Accuracy: 0.5758
+Modelo B - Bilateral Filter - Train Loss: 0.7592, Val Loss: 0.7064, Val Accuracy: 0.6212
+Modelo B - Canny Edge - Train Loss: 1.1913, Val Loss: 0.8083, Val Accuracy: 0.6364
+--- Epoch [4/5] ---
+Modelo A - Raw Data - Train Loss: 0.2234, Val Loss: 0.3689, Val Accuracy: 0.9091
+Modelo A - Bilateral Filter - Train Loss: 0.2179, Val Loss: 0.1913, Val Accuracy: 0.8788
+Modelo A - Canny Edge - Train Loss: 0.3606, Val Loss: 20.0509, Val Accuracy: 0.3939
+Modelo B - Raw Data - Train Loss: 0.7890, Val Loss: 0.7378, Val Accuracy: 0.5909
+Modelo B - Bilateral Filter - Train Loss: 0.8319, Val Loss: 0.7677, Val Accuracy: 0.6364
+Modelo B - Canny Edge - Train Loss: 1.0965, Val Loss: 0.7175, Val Accuracy: 0.6212
+--- Epoch [5/5] ---
+Modelo A - Raw Data - Train Loss: 0.2504, Val Loss: 0.1778, Val Accuracy: 0.9394
+Modelo A - Bilateral Filter - Train Loss: 0.1989, Val Loss: 0.2257, Val Accuracy: 0.9242
+Modelo A - Canny Edge - Train Loss: 0.4539, Val Loss: 0.9307, Val Accuracy: 0.5152
+Modelo B - Raw Data - Train Loss: 0.7583, Val Loss: 0.7229, Val Accuracy: 0.6364
+Modelo B - Bilateral Filter - Train Loss: 0.7472, Val Loss: 0.6924, Val Accuracy: 0.6667
+Modelo B - Canny Edge - Train Loss: 1.1375, Val Loss: 0.7495, Val Accuracy: 0.7273

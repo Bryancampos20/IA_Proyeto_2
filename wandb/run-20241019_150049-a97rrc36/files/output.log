@@ -1,0 +1,2 @@
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:52: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()

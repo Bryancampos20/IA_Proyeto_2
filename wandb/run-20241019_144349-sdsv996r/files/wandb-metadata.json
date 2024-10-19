@@ -1,0 +1,88 @@
+{
+    "os": "Linux-6.8.0-47-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-10-19T20:43:50.285675",
+    "startedAt": "2024-10-19T20:43:49.352196",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py",
+    "codePathLocal": "proyecto2.py",
+    "codePath": "proyecto2.py",
+    "git": {
+        "remote": "https://github.com/Bryancampos20/IA_Proyeto_2.git",
+        "commit": "9a399b7c03ea59fc1617aa89574fabd307774597"
+    },
+    "email": "miguelsanchez712000@estudiantec.cr",
+    "root": "/home/miguel/Desktop/IA_Proyeto_2",
+    "host": "miguel-pc",
+    "username": "miguel",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2100.077125,
+        "min": 800.0,
+        "max": 4000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2624.975,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.789,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2898.831,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.011,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.023,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2537.265,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.337,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.019,
+            "min": 800.0,
+            "max": 4000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 218.50913619995117,
+            "used": 113.03075790405273
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1050",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 19.3944091796875
+    }
+}
