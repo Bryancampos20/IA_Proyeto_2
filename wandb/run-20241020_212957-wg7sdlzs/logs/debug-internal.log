@@ -1,0 +1,21 @@
+{"time":"2024-10-20T21:29:57.162376788-06:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-20T21:29:57.162416396-06:00","level":"INFO","msg":"created symlink","path":"/home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241020_212957-wg7sdlzs/logs/debug-core.log"}
+{"time":"2024-10-20T21:29:57.276137907-06:00","level":"INFO","msg":"created new stream","id":"wg7sdlzs"}
+{"time":"2024-10-20T21:29:57.276211572-06:00","level":"INFO","msg":"stream: started","id":"wg7sdlzs"}
+{"time":"2024-10-20T21:29:57.276387838-06:00","level":"INFO","msg":"handler: started","stream_id":{"value":"wg7sdlzs"}}
+{"time":"2024-10-20T21:29:57.277016922-06:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"wg7sdlzs"}}
+{"time":"2024-10-20T21:29:57.277095758-06:00","level":"INFO","msg":"sender: started","stream_id":"wg7sdlzs"}
+{"time":"2024-10-20T21:29:57.683947106-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-20T21:29:57.972820261-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T21:29:57.972842692-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T21:29:58.023686445-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T21:29:58.023724817-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T21:29:58.023730634-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T21:29:58.023733657-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T21:29:58.024937576-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T21:29:58.037214565-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T21:29:58.039310569-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T21:29:58.056606933-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T21:29:59.004116204-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T21:29:59.020440127-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T21:40:04.782166256-06:00","level":"INFO","msg":"Pausing system monitor"}

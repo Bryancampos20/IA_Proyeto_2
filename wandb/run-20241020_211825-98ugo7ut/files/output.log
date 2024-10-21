@@ -1,0 +1,32 @@
+/tmp/ipykernel_58985/1496629156.py:12: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+CUDA está disponible. Usando GPU.
+Error al cargar el Modelo A: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Pasando a CPU.
+Modelo B cargado correctamente.
+--- Epoch [1/10] ---
+Modelo A - Raw Data - Train Loss: 0.9638, Val Loss: 2.9807, Val Accuracy: 0.6667
+Modelo A - Bilateral Filter - Train Loss: 0.6744, Val Loss: 29.5619, Val Accuracy: 0.3030
+Modelo A - Canny Edge - Train Loss: 1.1432, Val Loss: 1.9475, Val Accuracy: 0.6061
+Modelo B - Raw Data - Train Loss: 1.2585, Val Loss: 1.0908, Val Accuracy: 0.5758
+Modelo B - Bilateral Filter - Train Loss: 0.6635, Val Loss: 1.0951, Val Accuracy: 0.3939
+Modelo B - Canny Edge - Train Loss: 1.1996, Val Loss: 1.1506, Val Accuracy: 0.3939
+--- Epoch [2/10] ---
+Modelo A - Raw Data - Train Loss: 0.3160, Val Loss: 4.8647, Val Accuracy: 0.5000
+Modelo A - Bilateral Filter - Train Loss: 0.1335, Val Loss: 0.8021, Val Accuracy: 0.7576
+CUDA está disponible. Usando GPU.
+Intentando cargar el modelo A en GPU...
+Error al cargar el Modelo A en GPU: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Liberando recursos de GPU y volviendo a intentar...
+Error persistente al cargar el Modelo A: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+Pasando a CPU.
+Intentando cargar el modelo B en GPU...

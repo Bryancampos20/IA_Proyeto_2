@@ -1,0 +1,2 @@
+/tmp/ipykernel_58985/1496629156.py:12: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()

@@ -1,0 +1,87 @@
+{
+    "os": "Linux-6.8.0-47-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-10-21T03:18:34.279140",
+    "startedAt": "2024-10-21T03:18:25.488301",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/Bryancampos20/IA_Proyeto_2.git",
+        "commit": "aa698df26e30df1d2fe26c282a4fabeff93e63d4"
+    },
+    "email": "miguelsanchez712000@estudiantec.cr",
+    "root": "/home/miguel/Desktop/IA_Proyeto_2",
+    "host": "miguel-pc",
+    "username": "miguel",
+    "executable": "/bin/python3",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 2499.9015,
+        "min": 800.0,
+        "max": 4000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2900.224,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2899.983,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.036,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.008,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2900.045,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2899.973,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2590.289,
+            "min": 800.0,
+            "max": 4000.0
+        },
+        {
+            "current": 2899.979,
+            "min": 800.0,
+            "max": 4000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 218.50913619995117,
+            "used": 113.49636840820312
+        }
+    },
+    "gpu": "NVIDIA GeForce GTX 1050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1050",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 19.3944091796875
+    }
+}
