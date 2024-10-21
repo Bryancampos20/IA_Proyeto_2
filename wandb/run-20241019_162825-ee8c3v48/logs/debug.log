@@ -1,0 +1,29 @@
+2024-10-19 16:28:25,122 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Current SDK version is 0.17.5
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Configure stats pid to 88325
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Loading settings from /home/miguel/.config/wandb/settings
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Loading settings from /home/miguel/Desktop/IA_Proyeto_2/wandb/settings
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'proyecto2.py', 'program_abspath': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py', 'program': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py'}
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_init.py:_log_setup():529] Logging user logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_162825-ee8c3v48/logs/debug.log
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_init.py:_log_setup():530] Logging internal logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_162825-ee8c3v48/logs/debug-internal.log
+2024-10-19 16:28:25,123 INFO    MainThread:88325 [wandb_init.py:init():569] calling init triggers
+2024-10-19 16:28:25,124 INFO    MainThread:88325 [wandb_init.py:init():576] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'batch_size': 32, 'num_epochs': 10, 'architecture_A': 'ResNet50', 'architecture_B': 'CustomCNN', 'dataset': 'ImageFolder'}
+2024-10-19 16:28:25,124 INFO    MainThread:88325 [wandb_init.py:init():619] starting backend
+2024-10-19 16:28:25,124 INFO    MainThread:88325 [wandb_init.py:init():623] setting up manager
+2024-10-19 16:28:25,126 INFO    MainThread:88325 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-10-19 16:28:25,127 INFO    MainThread:88325 [wandb_init.py:init():631] backend started and connected
+2024-10-19 16:28:25,130 INFO    MainThread:88325 [wandb_init.py:init():720] updated telemetry
+2024-10-19 16:28:25,136 INFO    MainThread:88325 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-10-19 16:28:25,551 INFO    MainThread:88325 [wandb_run.py:_on_init():2435] communicating current version
+2024-10-19 16:28:25,985 INFO    MainThread:88325 [wandb_run.py:_on_init():2444] got version response upgrade_message: "wandb version 0.18.5 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-10-19 16:28:25,986 INFO    MainThread:88325 [wandb_init.py:init():804] starting run threads in backend
+2024-10-19 16:28:26,264 INFO    MainThread:88325 [wandb_run.py:_console_start():2413] atexit reg
+2024-10-19 16:28:26,264 INFO    MainThread:88325 [wandb_run.py:_redirect():2255] redirect: wrap_raw
+2024-10-19 16:28:26,264 INFO    MainThread:88325 [wandb_run.py:_redirect():2320] Wrapping output streams.
+2024-10-19 16:28:26,264 INFO    MainThread:88325 [wandb_run.py:_redirect():2345] Redirects installed.
+2024-10-19 16:28:26,266 INFO    MainThread:88325 [wandb_init.py:init():847] run started, returning control to user process
+2024-10-19 16:37:09,144 WARNING MsgRouterThr:88325 [router.py:message_loop():77] message_loop has been closed

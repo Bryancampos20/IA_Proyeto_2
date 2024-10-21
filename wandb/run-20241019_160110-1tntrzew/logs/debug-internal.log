@@ -1,0 +1,1269 @@
+2024-10-19 16:01:10,549 INFO    StreamThr :75058 [internal.py:wandb_internal():85] W&B internal server running at pid: 75058, started at: 2024-10-19 16:01:10.548335
+2024-10-19 16:01:10,551 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status
+2024-10-19 16:01:10,555 INFO    WriterThread:75058 [datastore.py:open_for_write():87] open: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/run-1tntrzew.wandb
+2024-10-19 16:01:10,556 DEBUG   SenderThread:75058 [sender.py:send():379] send: header
+2024-10-19 16:01:10,561 DEBUG   SenderThread:75058 [sender.py:send():379] send: run
+2024-10-19 16:01:10,946 INFO    SenderThread:75058 [dir_watcher.py:__init__():211] watching files in: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files
+2024-10-19 16:01:10,946 INFO    SenderThread:75058 [sender.py:_start_run_threads():1188] run started: 1tntrzew with start time 1729375270.548551
+2024-10-19 16:01:10,953 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: check_version
+2024-10-19 16:01:10,954 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: check_version
+2024-10-19 16:01:11,427 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: run_start
+2024-10-19 16:01:11,438 DEBUG   HandlerThread:75058 [system_info.py:__init__():26] System info init
+2024-10-19 16:01:11,438 DEBUG   HandlerThread:75058 [system_info.py:__init__():41] System info init done
+2024-10-19 16:01:11,438 INFO    HandlerThread:75058 [system_monitor.py:start():194] Starting system monitor
+2024-10-19 16:01:11,438 INFO    SystemMonitor:75058 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-10-19 16:01:11,438 INFO    HandlerThread:75058 [system_monitor.py:probe():214] Collecting system info
+2024-10-19 16:01:11,438 INFO    SystemMonitor:75058 [interfaces.py:start():188] Started cpu monitoring
+2024-10-19 16:01:11,439 INFO    SystemMonitor:75058 [interfaces.py:start():188] Started disk monitoring
+2024-10-19 16:01:11,440 INFO    SystemMonitor:75058 [interfaces.py:start():188] Started gpu monitoring
+2024-10-19 16:01:11,441 INFO    SystemMonitor:75058 [interfaces.py:start():188] Started memory monitoring
+2024-10-19 16:01:11,441 INFO    SystemMonitor:75058 [interfaces.py:start():188] Started network monitoring
+2024-10-19 16:01:11,446 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:11,446 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:11,449 DEBUG   HandlerThread:75058 [system_info.py:probe():152] Probing system
+2024-10-19 16:01:11,451 DEBUG   HandlerThread:75058 [system_info.py:_probe_git():137] Probing git
+2024-10-19 16:01:11,455 DEBUG   HandlerThread:75058 [system_info.py:_probe_git():145] Probing git done
+2024-10-19 16:01:11,455 DEBUG   HandlerThread:75058 [system_info.py:probe():200] Probing system done
+2024-10-19 16:01:11,455 DEBUG   HandlerThread:75058 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-47-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-10-19T22:01:11.449332', 'startedAt': '2024-10-19T22:01:10.540643', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py', 'codePathLocal': 'proyecto2.py', 'codePath': 'proyecto2.py', 'git': {'remote': 'https://github.com/Bryancampos20/IA_Proyeto_2.git', 'commit': 'cdfa3653fe7e064268a61301026e497364c99e41'}, 'email': 'miguelsanchez712000@estudiantec.cr', 'root': '/home/miguel/Desktop/IA_Proyeto_2', 'host': 'miguel-pc', 'username': 'miguel', 'executable': '/usr/bin/python3', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3800.504875, 'min': 800.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 3899.892, 'min': 800.0, 'max': 4000.0}, {'current': 3899.488, 'min': 800.0, 'max': 4000.0}, {'current': 3900.118, 'min': 800.0, 'max': 4000.0}, {'current': 3903.361, 'min': 800.0, 'max': 4000.0}, {'current': 3897.052, 'min': 800.0, 'max': 4000.0}, {'current': 3899.972, 'min': 800.0, 'max': 4000.0}, {'current': 3898.772, 'min': 800.0, 'max': 4000.0}, {'current': 3900.052, 'min': 800.0, 'max': 4000.0}], 'disk': {'/': {'total': 218.50913619995117, 'used': 113.36810684204102}}, 'gpu': 'NVIDIA GeForce GTX 1050', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1050', 'memory_total': 4294967296}], 'memory': {'total': 19.3944091796875}}
+2024-10-19 16:01:11,455 INFO    HandlerThread:75058 [system_monitor.py:probe():224] Finished collecting system info
+2024-10-19 16:01:11,455 INFO    HandlerThread:75058 [system_monitor.py:probe():227] Publishing system info
+2024-10-19 16:01:11,456 INFO    HandlerThread:75058 [system_monitor.py:probe():229] Finished publishing system info
+2024-10-19 16:01:11,459 DEBUG   SenderThread:75058 [sender.py:send():379] send: files
+2024-10-19 16:01:11,460 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-10-19 16:01:11,675 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: python_packages
+2024-10-19 16:01:11,676 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: python_packages
+2024-10-19 16:01:11,717 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:11,717 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:01:11,717 DEBUG   SenderThread:75058 [sender.py:send():379] send: telemetry
+2024-10-19 16:01:11,718 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:01:11,947 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-metadata.json
+2024-10-19 16:01:11,947 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/requirements.txt
+2024-10-19 16:01:12,043 INFO    wandb-upload_0:75058 [upload_job.py:push():130] Uploaded file /tmp/tmpeq0xw0ckwandb/9xs1681k-wandb-metadata.json
+2024-10-19 16:01:12,676 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:12,946 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:13,447 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:13,447 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:13,676 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:14,676 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:14,947 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:15,447 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:15,448 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:15,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:16,211 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:16,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:17,448 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:17,448 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:17,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:18,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:19,450 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:19,450 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:19,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:20,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:21,450 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:21,450 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:21,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:21,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:22,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:23,140 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:23,141 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:23,141 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:23,142 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:23,451 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:23,451 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:23,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:23,949 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:24,317 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:24,317 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:24,317 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:24,318 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:24,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:24,950 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:25,452 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:25,452 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:25,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:26,676 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:01:26,676 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:01:26,717 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:26,813 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:26,950 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:27,452 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:27,452 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:27,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:28,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:29,453 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:29,453 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:29,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:30,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:31,454 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:31,454 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:31,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:32,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:32,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:33,455 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:33,455 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:33,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:34,086 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:34,087 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:34,087 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:34,088 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:34,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:34,953 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:35,149 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:35,149 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:35,150 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:35,150 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:35,455 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:35,456 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:35,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:35,953 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:36,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:36,953 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:37,456 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:37,456 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:37,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:38,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:38,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:39,457 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:39,457 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:39,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:40,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:41,509 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:01:41,510 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:41,510 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:41,676 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:01:41,676 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:01:41,717 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:42,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:42,766 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:42,766 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:42,766 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:42,768 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:42,955 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:43,510 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:43,511 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:43,679 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:43,772 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:43,900 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:43,912 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:43,913 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:43,913 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:43,956 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:43,956 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/config.yaml
+2024-10-19 16:01:44,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:44,956 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:45,511 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:45,511 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:45,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:46,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:46,957 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:47,512 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:47,512 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:47,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:48,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:48,949 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:48,958 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:49,513 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:49,513 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:49,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:50,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:50,958 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:51,513 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:51,513 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:51,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:52,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:52,805 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:52,806 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:52,806 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:52,807 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:52,959 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:52,959 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:53,514 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:53,514 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:53,680 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:53,792 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:01:53,793 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:01:53,793 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:01:53,794 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:01:53,959 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:01:54,265 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:54,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:54,960 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:55,515 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:55,515 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:55,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:56,676 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:01:56,677 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:01:56,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:56,960 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:57,515 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:57,516 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:57,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:58,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:01:58,961 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:01:59,295 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:01:59,516 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:59,516 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:01:59,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:00,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:00,962 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:01,517 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:01,517 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:01,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:01,961 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:01,962 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:01,963 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:01,963 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:01,964 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:02,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:02,943 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:02,944 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:02,944 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:02,944 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:02,964 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:02,964 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:03,518 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:03,518 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:03,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:04,391 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:04,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:04,964 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:05,518 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:05,518 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:05,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:06,684 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:06,965 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:07,519 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:07,519 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:07,684 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:08,684 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:08,966 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:09,309 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:09,310 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:09,310 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:09,311 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:09,438 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:09,520 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:09,520 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:09,684 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:09,966 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:10,310 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:10,310 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:10,310 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:10,311 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:10,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:10,966 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:10,966 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:11,441 DEBUG   SystemMonitor:75058 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-10-19 16:02:11,443 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:02:11,566 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:02:11,566 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:11,566 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:11,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:02:11,677 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:02:11,717 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:12,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:12,967 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:13,567 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:13,567 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:13,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:14,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:14,868 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:15,567 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:15,567 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:15,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:16,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:17,568 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:17,568 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:17,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:18,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:19,569 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:19,569 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:19,686 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:20,628 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:20,628 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:20,629 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:20,630 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:20,631 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:20,686 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:20,969 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:21,570 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:21,570 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:21,686 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:21,791 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:21,792 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:21,792 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:21,792 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:21,969 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:22,686 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:23,571 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:23,571 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:23,686 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:24,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:24,970 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:25,572 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:25,572 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:25,686 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:25,929 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:26,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:02:26,677 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:02:26,718 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:27,572 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:27,572 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:27,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:28,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:29,573 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:29,573 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:29,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:30,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:31,423 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:31,424 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:31,424 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:31,424 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:31,425 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:31,574 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:31,574 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:31,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:31,972 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:32,540 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:32,541 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:32,541 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:32,541 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:32,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:32,972 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:33,574 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:33,574 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:33,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:34,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:34,973 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:35,575 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:35,575 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:35,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:36,664 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:36,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:37,576 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:37,576 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:37,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:38,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:39,576 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:39,576 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:39,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:40,316 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:40,317 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:40,317 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:40,317 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:40,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:40,975 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:41,411 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:41,412 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:41,412 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:41,412 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:41,443 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:02:41,673 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:02:41,674 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:41,674 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:41,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:02:41,677 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:02:41,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:41,826 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:41,975 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:42,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:42,976 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:43,674 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:43,674 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:43,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:44,688 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:44,976 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:45,675 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:45,675 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:45,689 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:46,689 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:46,977 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:47,077 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:47,676 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:47,676 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:47,689 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:48,689 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:48,977 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:49,677 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:49,677 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:49,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:50,110 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:50,110 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:50,111 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:50,111 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:50,689 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:50,978 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:50,978 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:51,127 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:51,127 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:51,127 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:51,128 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:51,677 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:51,677 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:51,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:51,978 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:02:52,341 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:52,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:52,978 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:53,678 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:53,678 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:53,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:54,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:54,979 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:55,679 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:55,679 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:55,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:56,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:02:56,677 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:02:56,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:56,979 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:57,680 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:57,680 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:57,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:57,791 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:02:58,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:58,980 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:02:59,255 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:02:59,256 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:02:59,256 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:02:59,256 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:02:59,680 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:59,680 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:02:59,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:02:59,980 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:00,282 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:00,282 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:00,283 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:00,283 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:00,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:00,981 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:00,981 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:01,681 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:01,681 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:01,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:02,690 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:02,926 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:02,981 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:03,682 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:03,682 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:03,691 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:04,691 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:04,982 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:05,683 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:05,683 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:05,691 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:06,691 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:06,799 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:06,800 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:06,800 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:06,800 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:06,983 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:06,983 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:07,683 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:07,683 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:07,691 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:07,798 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:07,799 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:07,799 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:07,799 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:07,937 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:07,983 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:08,691 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:08,983 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:09,684 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:09,684 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:09,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:10,691 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:10,984 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:11,443 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:03:11,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:03:11,677 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:03:11,718 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:11,730 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:03:11,731 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:11,731 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:12,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:13,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:13,731 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:13,732 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:13,872 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:14,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:15,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:15,732 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:15,732 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:16,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:17,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:17,733 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:17,733 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:18,021 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:18,022 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:18,022 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:18,023 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:18,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:18,986 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:19,024 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:19,136 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:19,137 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:19,137 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:19,137 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:19,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:19,734 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:19,734 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:19,987 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:20,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:20,987 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:21,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:21,734 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:21,734 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:22,692 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:23,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:23,735 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:23,735 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:24,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:24,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:25,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:25,736 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:25,736 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:26,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:03:26,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:03:26,719 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:27,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:27,736 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:27,736 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:28,626 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:28,627 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:28,627 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:28,628 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:28,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:28,989 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:29,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:29,737 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:29,737 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:29,769 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:29,770 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:29,770 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:29,770 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:29,770 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:29,989 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:30,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:31,693 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:31,738 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:31,738 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:32,694 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:32,991 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:33,694 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:33,739 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:33,739 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:34,694 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:35,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:35,694 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:35,739 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:35,739 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:36,694 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:37,486 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:37,486 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:37,486 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:37,487 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:37,694 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:37,740 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:37,740 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:37,992 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:38,584 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:38,585 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:38,585 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:38,585 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:38,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:38,993 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:39,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:39,741 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:39,741 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:40,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:40,798 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:40,993 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:41,444 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:03:41,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:03:41,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:03:41,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:41,800 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:03:41,801 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:41,801 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:42,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:42,994 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:43,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:43,801 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:43,801 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:44,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:44,995 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:45,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:45,802 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:45,802 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:46,434 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:46,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:46,995 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:47,484 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:47,484 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:47,485 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:47,485 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:47,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:47,803 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:47,803 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:47,996 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:48,461 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:48,462 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:48,462 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:48,462 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:48,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:48,996 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:48,996 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:49,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:49,803 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:49,804 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:50,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:50,997 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:51,637 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:51,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:51,804 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:51,804 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:52,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:52,997 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:53,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:53,805 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:53,805 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:54,696 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:54,998 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:55,697 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:55,806 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:55,806 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:56,677 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:03:56,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:03:56,697 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:56,855 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:03:56,999 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:57,006 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:57,006 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:57,006 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:57,007 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:57,697 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:57,807 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:57,807 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:57,999 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:58,032 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:03:58,032 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:03:58,032 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:03:58,033 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:03:58,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:58,999 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:03:58,999 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:03:59,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:03:59,807 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:03:59,808 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:00,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:01,000 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:01,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:01,808 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:01,808 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:02,250 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:02,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:03,001 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:03,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:03,809 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:03,809 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:04,539 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:04,540 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:04,540 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:04,541 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:04,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:05,002 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:05,002 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:05,557 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:05,557 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:05,558 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:05,558 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:05,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:05,810 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:05,810 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:06,002 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:06,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:07,002 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:07,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:07,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:07,810 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:07,811 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:08,698 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:09,701 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:09,811 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:09,812 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:10,699 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:11,444 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:04:11,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:04:11,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:04:11,718 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:11,863 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:04:11,863 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:11,863 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:12,700 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:12,832 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:13,699 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:13,864 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:13,864 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:14,699 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:15,700 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:15,865 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:15,865 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:16,287 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:16,288 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:16,288 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:16,289 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:16,699 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:17,005 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:17,543 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:17,544 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:17,544 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:17,544 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:17,702 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:17,866 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:17,866 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:18,006 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:18,681 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:18,702 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:19,007 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:19,701 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:19,867 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:19,867 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:20,701 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:21,702 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:21,868 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:21,868 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:22,704 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:23,683 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:23,704 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:23,868 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:23,869 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:24,704 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:25,704 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:25,869 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:25,869 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:26,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:04:26,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:04:26,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:27,704 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:27,870 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:27,870 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:28,536 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:28,537 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:28,537 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:28,537 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:28,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:29,013 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:29,538 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:29,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:29,871 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:29,871 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:29,940 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:29,941 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:29,941 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:29,941 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:30,013 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:30,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:31,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:31,872 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:31,872 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:32,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:33,016 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:33,706 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:33,873 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:33,874 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:34,684 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:34,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:35,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:35,875 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:35,875 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:36,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:37,705 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:37,876 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:37,876 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:38,706 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:38,962 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:38,963 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:38,963 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:38,965 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:39,019 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:39,706 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:39,876 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:39,877 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:39,965 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:40,264 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:40,265 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:40,265 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:40,265 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:40,708 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:41,020 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:41,445 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:04:41,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:04:41,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:04:41,707 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:41,941 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:04:41,942 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:41,942 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:42,707 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:43,022 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:43,707 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:43,943 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:43,943 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:44,707 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:45,022 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:45,304 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:45,707 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:45,943 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:45,944 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:46,707 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:47,023 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:47,708 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:47,944 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:47,944 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:48,708 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:49,024 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:49,708 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:49,945 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:49,945 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:50,048 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:50,049 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:50,049 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:50,051 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:50,493 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:50,708 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:51,028 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:51,028 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:51,103 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:04:51,105 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:04:51,105 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:04:51,106 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:04:51,708 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:51,946 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:51,946 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:52,027 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:04:52,709 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:53,027 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:53,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:53,947 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:53,947 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:54,710 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:55,028 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:55,710 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:55,799 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:04:55,948 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:55,948 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:56,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:04:56,679 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:04:56,710 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:57,029 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:57,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:57,948 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:57,949 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:58,710 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:59,032 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:04:59,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:04:59,949 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:04:59,949 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:00,233 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:00,233 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:00,234 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:00,235 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:00,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:01,031 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:01,031 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:01,112 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:01,382 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:01,383 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:01,383 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:01,383 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:01,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:01,950 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:01,950 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:02,032 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:02,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:03,032 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:03,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:03,951 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:03,951 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:04,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:05,033 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:05,711 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:05,951 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:05,952 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:06,213 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:06,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:07,034 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:07,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:07,952 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:07,952 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:08,544 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:08,545 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:08,546 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:08,546 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:08,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:09,034 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:09,035 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:09,649 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:09,649 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:09,650 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:09,650 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:09,713 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:09,953 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:09,953 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:10,035 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:10,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:11,035 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:11,447 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:05:11,447 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:11,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:05:11,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:05:11,719 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:12,020 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:05:12,021 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:12,021 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:12,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:13,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:14,022 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:14,022 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:14,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:15,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:16,022 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:16,022 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:16,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:16,712 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:17,713 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:18,025 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:18,026 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:18,713 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:19,713 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:20,026 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:20,027 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:20,517 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:20,518 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:20,518 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:20,519 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:20,713 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:21,039 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:21,653 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:21,653 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:21,654 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:21,654 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:21,695 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:21,722 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:22,027 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:22,027 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:22,039 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:22,719 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:23,039 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:23,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:24,028 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:24,028 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:24,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:25,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:26,032 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:26,032 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:26,678 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:05:26,678 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:05:26,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:26,866 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:27,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:28,033 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:28,033 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:28,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:29,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:30,034 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:30,034 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:30,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:31,720 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:31,954 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:31,955 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:31,955 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:31,955 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:31,957 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:32,034 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:32,034 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:32,042 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:32,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:33,175 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:33,176 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:33,176 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:33,177 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:33,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:34,035 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:34,035 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:34,043 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:34,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:35,043 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:35,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:36,036 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:36,036 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:36,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:37,687 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:37,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:38,037 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:38,038 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:38,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:39,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:40,038 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:40,039 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:40,721 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:41,351 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:41,352 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:41,352 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:41,352 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:41,447 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:05:41,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:05:41,686 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:05:41,722 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:42,046 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:42,089 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:05:42,090 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:42,090 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:42,636 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:42,637 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:42,637 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:42,638 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:42,722 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:42,767 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:43,046 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:43,722 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:44,090 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:44,091 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:44,722 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:45,046 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:45,723 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:46,092 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:46,092 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:46,723 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:47,047 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:47,723 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:48,092 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:48,093 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:48,137 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:48,723 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:49,048 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:49,723 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:50,093 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:50,093 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:50,723 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:51,049 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:51,734 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:51,753 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:51,754 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:51,754 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:51,754 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:52,049 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:52,094 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:52,094 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:52,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:52,839 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:05:52,840 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:05:52,841 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:05:52,841 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:05:53,050 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:05:53,050 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:53,349 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:53,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:54,094 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:54,094 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:54,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:55,050 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:55,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:56,095 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:56,095 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:56,682 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 16:05:56,682 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 16:05:56,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:57,051 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:57,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:58,096 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:58,096 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:05:58,466 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:05:58,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:05:59,051 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:05:59,724 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:00,096 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:00,097 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:00,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:01,052 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:06:01,195 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:06:01,196 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:06:01,196 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:06:01,197 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:06:01,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:02,053 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:06:02,097 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:02,097 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:02,247 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:06:02,248 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:06:02,248 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:06:02,248 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:06:02,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:03,053 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:06:03,054 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:06:03,685 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:06:03,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:04,098 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:04,098 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:04,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:05,054 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:06:05,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:06,098 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:06,099 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:06,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:07,055 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:06:07,726 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:08,099 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:08,099 ERROR   gpu       :75058 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 16:06:08,717 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:06:08,725 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:08,777 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:06:08,777 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:06:08,777 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:06:08,778 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:06:09,055 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:06:09,055 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:06:09,726 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:09,793 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 16:06:09,794 DEBUG   SenderThread:75058 [sender.py:send():379] send: history
+2024-10-19 16:06:09,794 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 16:06:09,794 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:06:09,888 DEBUG   SenderThread:75058 [sender.py:send():379] send: exit
+2024-10-19 16:06:09,889 INFO    SenderThread:75058 [sender.py:send_exit():586] handling exit code: 0
+2024-10-19 16:06:09,889 INFO    SenderThread:75058 [sender.py:send_exit():588] handling runtime: 298
+2024-10-19 16:06:09,889 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:06:09,889 INFO    SenderThread:75058 [sender.py:send_exit():594] send defer
+2024-10-19 16:06:09,889 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,889 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 0
+2024-10-19 16:06:09,890 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,890 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-10-19 16:06:09,890 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 1
+2024-10-19 16:06:09,890 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,890 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 1
+2024-10-19 16:06:09,890 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,890 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-10-19 16:06:09,890 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 2
+2024-10-19 16:06:09,890 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,890 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 2
+2024-10-19 16:06:09,890 INFO    HandlerThread:75058 [system_monitor.py:finish():203] Stopping system monitor
+2024-10-19 16:06:09,891 INFO    HandlerThread:75058 [interfaces.py:finish():200] Joined cpu monitor
+2024-10-19 16:06:09,891 INFO    HandlerThread:75058 [interfaces.py:finish():200] Joined disk monitor
+2024-10-19 16:06:09,891 DEBUG   SystemMonitor:75058 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-10-19 16:06:09,891 DEBUG   SystemMonitor:75058 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-10-19 16:06:09,962 ERROR   gpu       :75058 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 16:06:09,963 INFO    HandlerThread:75058 [interfaces.py:finish():200] Joined gpu monitor
+2024-10-19 16:06:09,963 INFO    HandlerThread:75058 [interfaces.py:finish():200] Joined memory monitor
+2024-10-19 16:06:09,963 INFO    HandlerThread:75058 [interfaces.py:finish():200] Joined network monitor
+2024-10-19 16:06:09,963 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,963 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-10-19 16:06:09,963 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 3
+2024-10-19 16:06:09,964 DEBUG   SenderThread:75058 [sender.py:send():379] send: stats
+2024-10-19 16:06:09,964 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,964 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 3
+2024-10-19 16:06:09,964 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,964 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-10-19 16:06:09,964 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 4
+2024-10-19 16:06:09,964 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,964 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 4
+2024-10-19 16:06:09,965 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,965 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-10-19 16:06:09,965 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 5
+2024-10-19 16:06:09,965 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,965 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 5
+2024-10-19 16:06:09,965 DEBUG   SenderThread:75058 [sender.py:send():379] send: summary
+2024-10-19 16:06:09,965 INFO    SenderThread:75058 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 16:06:09,966 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,966 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-10-19 16:06:09,966 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 6
+2024-10-19 16:06:09,966 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,966 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 6
+2024-10-19 16:06:09,966 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,966 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-10-19 16:06:09,966 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 7
+2024-10-19 16:06:09,966 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 16:06:09,966 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:09,966 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 7
+2024-10-19 16:06:09,967 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:09,967 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-10-19 16:06:10,056 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:06:10,596 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 8
+2024-10-19 16:06:10,597 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:10,597 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 8
+2024-10-19 16:06:10,598 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:10,598 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-10-19 16:06:10,598 INFO    SenderThread:75058 [job_builder.py:build():440] Attempting to build job artifact
+2024-10-19 16:06:10,599 INFO    SenderThread:75058 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-10-19 16:06:10,647 INFO    SenderThread:75058 [job_builder.py:build():545] adding wandb-job metadata file
+2024-10-19 16:06:10,652 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 9
+2024-10-19 16:06:10,652 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:10,653 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 9
+2024-10-19 16:06:10,653 DEBUG   SenderThread:75058 [sender.py:send():379] send: artifact
+2024-10-19 16:06:10,889 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: poll_exit
+2024-10-19 16:06:11,056 INFO    Thread-12 :75058 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:06:11,239 INFO    SenderThread:75058 [sender.py:send_artifact():1537] sent artifact job-https___github.com_Bryancampos20_IA_Proyeto_2.git_proyecto2.py - {'id': 'QXJ0aWZhY3Q6MTI4NzAyMDU5Mw==', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjQ3ODczNzY4Mw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6MTI4NzAyODIzNw==', 'versionIndex': 7}}}
+2024-10-19 16:06:11,239 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:11,239 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-10-19 16:06:11,239 INFO    SenderThread:75058 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-10-19 16:06:12,057 INFO    SenderThread:75058 [dir_watcher.py:finish():388] scan: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files
+2024-10-19 16:06:12,057 INFO    SenderThread:75058 [dir_watcher.py:finish():402] scan save: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/config.yaml config.yaml
+2024-10-19 16:06:12,057 INFO    SenderThread:75058 [dir_watcher.py:finish():402] scan save: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json wandb-summary.json
+2024-10-19 16:06:12,059 INFO    SenderThread:75058 [dir_watcher.py:finish():402] scan save: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/requirements.txt requirements.txt
+2024-10-19 16:06:12,061 INFO    SenderThread:75058 [dir_watcher.py:finish():402] scan save: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-metadata.json wandb-metadata.json
+2024-10-19 16:06:12,062 INFO    SenderThread:75058 [dir_watcher.py:finish():402] scan save: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log output.log
+2024-10-19 16:06:12,062 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 10
+2024-10-19 16:06:12,062 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: poll_exit
+2024-10-19 16:06:12,064 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:12,064 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 10
+2024-10-19 16:06:12,065 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:12,065 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-10-19 16:06:12,065 INFO    SenderThread:75058 [file_pusher.py:finish():169] shutting down file pusher
+2024-10-19 16:06:12,559 INFO    wandb-upload_0:75058 [upload_job.py:push():130] Uploaded file /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/config.yaml
+2024-10-19 16:06:12,771 INFO    wandb-upload_2:75058 [upload_job.py:push():130] Uploaded file /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/requirements.txt
+2024-10-19 16:06:12,806 INFO    wandb-upload_3:75058 [upload_job.py:push():130] Uploaded file /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/output.log
+2024-10-19 16:06:12,819 INFO    wandb-upload_1:75058 [upload_job.py:push():130] Uploaded file /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/files/wandb-summary.json
+2024-10-19 16:06:12,890 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: poll_exit
+2024-10-19 16:06:12,890 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: poll_exit
+2024-10-19 16:06:13,020 INFO    Thread-11 (_thread_body):75058 [sender.py:transition_state():614] send defer: 11
+2024-10-19 16:06:13,020 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:13,020 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 11
+2024-10-19 16:06:13,020 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:13,020 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-10-19 16:06:13,020 INFO    SenderThread:75058 [file_pusher.py:join():175] waiting for file pusher
+2024-10-19 16:06:13,021 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 12
+2024-10-19 16:06:13,021 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:13,021 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 12
+2024-10-19 16:06:13,021 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:13,021 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-10-19 16:06:13,021 INFO    SenderThread:75058 [file_stream.py:finish():601] file stream finish called
+2024-10-19 16:06:13,372 INFO    SenderThread:75058 [file_stream.py:finish():605] file stream finish is done
+2024-10-19 16:06:13,372 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 13
+2024-10-19 16:06:13,372 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:13,372 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 13
+2024-10-19 16:06:13,373 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:13,373 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-10-19 16:06:13,373 INFO    SenderThread:75058 [sender.py:transition_state():614] send defer: 14
+2024-10-19 16:06:13,373 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: defer
+2024-10-19 16:06:13,374 INFO    HandlerThread:75058 [handler.py:handle_request_defer():184] handle defer: 14
+2024-10-19 16:06:13,374 DEBUG   SenderThread:75058 [sender.py:send():379] send: final
+2024-10-19 16:06:13,374 DEBUG   SenderThread:75058 [sender.py:send():379] send: footer
+2024-10-19 16:06:13,374 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: defer
+2024-10-19 16:06:13,375 INFO    SenderThread:75058 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-10-19 16:06:13,375 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: poll_exit
+2024-10-19 16:06:13,376 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: poll_exit
+2024-10-19 16:06:13,377 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: server_info
+2024-10-19 16:06:13,378 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: server_info
+2024-10-19 16:06:13,383 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: poll_exit
+2024-10-19 16:06:13,385 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: get_summary
+2024-10-19 16:06:13,386 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: sampled_history
+2024-10-19 16:06:13,389 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 16:06:13,490 DEBUG   SenderThread:75058 [sender.py:send_request():406] send_request: poll_exit
+2024-10-19 16:06:13,491 INFO    MainThread:75058 [wandb_run.py:_footer_history_summary_info():4016] rendering history
+2024-10-19 16:06:13,492 INFO    MainThread:75058 [wandb_run.py:_footer_history_summary_info():4048] rendering summary
+2024-10-19 16:06:13,493 INFO    MainThread:75058 [wandb_run.py:_footer_sync_info():3975] logging synced files
+2024-10-19 16:06:13,493 DEBUG   HandlerThread:75058 [handler.py:handle_request():158] handle_request: shutdown
+2024-10-19 16:06:13,493 INFO    HandlerThread:75058 [handler.py:finish():882] shutting down handler
+2024-10-19 16:06:14,384 INFO    WriterThread:75058 [datastore.py:close():296] close: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_160110-1tntrzew/run-1tntrzew.wandb
+2024-10-19 16:06:14,491 INFO    SenderThread:75058 [sender.py:finish():1615] shutting down sender
+2024-10-19 16:06:14,491 INFO    SenderThread:75058 [file_pusher.py:finish():169] shutting down file pusher
+2024-10-19 16:06:14,491 INFO    SenderThread:75058 [file_pusher.py:join():175] waiting for file pusher

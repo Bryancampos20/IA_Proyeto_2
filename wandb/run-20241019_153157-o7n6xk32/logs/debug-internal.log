@@ -1,0 +1,86 @@
+2024-10-19 15:31:57,705 INFO    StreamThr :61775 [internal.py:wandb_internal():85] W&B internal server running at pid: 61775, started at: 2024-10-19 15:31:57.705309
+2024-10-19 15:31:57,706 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: status
+2024-10-19 15:31:57,707 INFO    WriterThread:61775 [datastore.py:open_for_write():87] open: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/run-o7n6xk32.wandb
+2024-10-19 15:31:57,709 DEBUG   SenderThread:61775 [sender.py:send():379] send: header
+2024-10-19 15:31:57,713 DEBUG   SenderThread:61775 [sender.py:send():379] send: run
+2024-10-19 15:31:58,122 INFO    SenderThread:61775 [dir_watcher.py:__init__():211] watching files in: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/files
+2024-10-19 15:31:58,122 INFO    SenderThread:61775 [sender.py:_start_run_threads():1188] run started: o7n6xk32 with start time 1729373517.705113
+2024-10-19 15:31:58,143 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: check_version
+2024-10-19 15:31:58,144 DEBUG   SenderThread:61775 [sender.py:send_request():406] send_request: check_version
+2024-10-19 15:31:58,638 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: run_start
+2024-10-19 15:31:58,650 DEBUG   HandlerThread:61775 [system_info.py:__init__():26] System info init
+2024-10-19 15:31:58,650 DEBUG   HandlerThread:61775 [system_info.py:__init__():41] System info init done
+2024-10-19 15:31:58,650 INFO    HandlerThread:61775 [system_monitor.py:start():194] Starting system monitor
+2024-10-19 15:31:58,651 INFO    SystemMonitor:61775 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-10-19 15:31:58,651 INFO    HandlerThread:61775 [system_monitor.py:probe():214] Collecting system info
+2024-10-19 15:31:58,652 INFO    SystemMonitor:61775 [interfaces.py:start():188] Started cpu monitoring
+2024-10-19 15:31:58,652 INFO    SystemMonitor:61775 [interfaces.py:start():188] Started disk monitoring
+2024-10-19 15:31:58,652 INFO    SystemMonitor:61775 [interfaces.py:start():188] Started gpu monitoring
+2024-10-19 15:31:58,653 INFO    SystemMonitor:61775 [interfaces.py:start():188] Started memory monitoring
+2024-10-19 15:31:58,654 INFO    SystemMonitor:61775 [interfaces.py:start():188] Started network monitoring
+2024-10-19 15:31:58,660 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:31:58,660 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:31:58,662 DEBUG   HandlerThread:61775 [system_info.py:probe():152] Probing system
+2024-10-19 15:31:58,663 DEBUG   HandlerThread:61775 [system_info.py:_probe_git():137] Probing git
+2024-10-19 15:31:58,669 DEBUG   HandlerThread:61775 [system_info.py:_probe_git():145] Probing git done
+2024-10-19 15:31:58,669 DEBUG   HandlerThread:61775 [system_info.py:probe():200] Probing system done
+2024-10-19 15:31:58,669 DEBUG   HandlerThread:61775 [system_monitor.py:probe():223] {'os': 'Linux-6.8.0-47-generic-x86_64-with-glibc2.35', 'python': '3.10.12', 'heartbeatAt': '2024-10-19T21:31:58.662142', 'startedAt': '2024-10-19T21:31:57.701465', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py', 'codePathLocal': 'proyecto2.py', 'codePath': 'proyecto2.py', 'git': {'remote': 'https://github.com/Bryancampos20/IA_Proyeto_2.git', 'commit': 'cdfa3653fe7e064268a61301026e497364c99e41'}, 'email': 'miguelsanchez712000@estudiantec.cr', 'root': '/home/miguel/Desktop/IA_Proyeto_2', 'host': 'miguel-pc', 'username': 'miguel', 'executable': '/usr/bin/python3', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3613.426875, 'min': 800.0, 'max': 4000.0}, 'cpu_freq_per_core': [{'current': 3900.022, 'min': 800.0, 'max': 4000.0}, {'current': 3719.589, 'min': 800.0, 'max': 4000.0}, {'current': 3900.247, 'min': 800.0, 'max': 4000.0}, {'current': 3899.776, 'min': 800.0, 'max': 4000.0}, {'current': 3900.02, 'min': 800.0, 'max': 4000.0}, {'current': 3900.113, 'min': 800.0, 'max': 4000.0}, {'current': 3900.082, 'min': 800.0, 'max': 4000.0}, {'current': 3900.078, 'min': 800.0, 'max': 4000.0}], 'disk': {'/': {'total': 218.50913619995117, 'used': 113.38117599487305}}, 'gpu': 'NVIDIA GeForce GTX 1050', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1050', 'memory_total': 4294967296}], 'memory': {'total': 19.3944091796875}}
+2024-10-19 15:31:58,669 INFO    HandlerThread:61775 [system_monitor.py:probe():224] Finished collecting system info
+2024-10-19 15:31:58,669 INFO    HandlerThread:61775 [system_monitor.py:probe():227] Publishing system info
+2024-10-19 15:31:58,669 INFO    HandlerThread:61775 [system_monitor.py:probe():229] Finished publishing system info
+2024-10-19 15:31:58,674 DEBUG   SenderThread:61775 [sender.py:send():379] send: files
+2024-10-19 15:31:58,674 INFO    SenderThread:61775 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-10-19 15:31:58,902 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: python_packages
+2024-10-19 15:31:58,903 DEBUG   SenderThread:61775 [sender.py:send_request():406] send_request: python_packages
+2024-10-19 15:31:58,944 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: stop_status
+2024-10-19 15:31:58,944 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:31:58,944 DEBUG   SenderThread:61775 [sender.py:send_request():406] send_request: stop_status
+2024-10-19 15:31:59,112 DEBUG   SenderThread:61775 [sender.py:send():379] send: telemetry
+2024-10-19 15:31:59,123 INFO    Thread-12 :61775 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/files/wandb-metadata.json
+2024-10-19 15:31:59,123 INFO    Thread-12 :61775 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/files/requirements.txt
+2024-10-19 15:31:59,304 INFO    wandb-upload_0:61775 [upload_job.py:push():130] Uploaded file /tmp/tmpbdfg04j3wandb/t6wi4468-wandb-metadata.json
+2024-10-19 15:31:59,903 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:00,122 INFO    Thread-12 :61775 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/files/output.log
+2024-10-19 15:32:00,660 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:00,661 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:00,903 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:01,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:02,123 INFO    Thread-12 :61775 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/files/output.log
+2024-10-19 15:32:02,662 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:02,662 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:02,821 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:32:02,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:03,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:04,662 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:04,662 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:04,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:05,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:06,663 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:06,663 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:06,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:07,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:32:07,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:08,664 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:08,664 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:08,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:09,514 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 15:32:09,515 DEBUG   SenderThread:61775 [sender.py:send():379] send: history
+2024-10-19 15:32:09,516 DEBUG   SenderThread:61775 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 15:32:09,517 INFO    SenderThread:61775 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 15:32:09,904 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: internal_messages
+2024-10-19 15:32:10,125 INFO    Thread-12 :61775 [dir_watcher.py:_on_file_created():271] file/dir created: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/files/wandb-summary.json
+2024-10-19 15:32:10,637 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: partial_history
+2024-10-19 15:32:10,638 DEBUG   SenderThread:61775 [sender.py:send():379] send: history
+2024-10-19 15:32:10,638 DEBUG   SenderThread:61775 [sender.py:send_request():406] send_request: summary_record
+2024-10-19 15:32:10,639 INFO    SenderThread:61775 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-10-19 15:32:10,664 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:10,664 ERROR   gpu       :61775 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-10-19 15:32:11,125 INFO    Thread-12 :61775 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241019_153157-o7n6xk32/files/wandb-summary.json
+2024-10-19 15:32:12,658 INFO    memory    :61775 [interfaces.py:monitor():138] Process proc.memory.rssMB has exited.
+2024-10-19 15:32:12,659 DEBUG   SystemMonitor:61775 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-10-19 15:32:12,659 DEBUG   SystemMonitor:61775 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-10-19 15:32:12,659 DEBUG   SystemMonitor:61775 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-10-19 15:32:12,661 DEBUG   SenderThread:61775 [sender.py:send():379] send: stats
+2024-10-19 15:32:12,662 ERROR   gpu       :61775 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-10-19 15:32:13,662 DEBUG   HandlerThread:61775 [handler.py:handle_request():158] handle_request: status_report
+2024-10-19 15:32:14,642 INFO    MainThread:61775 [internal.py:handle_exit():75] Internal process exited
