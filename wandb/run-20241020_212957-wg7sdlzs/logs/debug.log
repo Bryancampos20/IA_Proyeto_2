@@ -45,3 +45,40 @@ config: {'learning_rate': 0.001, 'batch_size': 64, 'num_epochs': 10, 'architectu
 2024-10-20 21:29:59,020 INFO    MainThread:6023 [wandb_init.py:_resume_backend():450] resuming backend
 2024-10-20 21:40:04,781 INFO    MainThread:6023 [jupyter.py:save_ipynb():387] not saving jupyter notebook
 2024-10-20 21:40:04,781 INFO    MainThread:6023 [wandb_init.py:_pause_backend():445] pausing backend
+2024-10-20 23:03:49,227 INFO    MainThread:6023 [wandb_init.py:_resume_backend():450] resuming backend
+2024-10-20 23:03:49,229 INFO    MainThread:6023 [jupyter.py:save_ipynb():387] not saving jupyter notebook
+2024-10-20 23:03:49,229 INFO    MainThread:6023 [wandb_init.py:_pause_backend():445] pausing backend
+2024-10-20 23:03:49,267 INFO    MainThread:6023 [wandb_init.py:_resume_backend():450] resuming backend
+2024-10-20 23:03:49,870 INFO    MainThread:6023 [jupyter.py:save_ipynb():387] not saving jupyter notebook
+2024-10-20 23:03:49,871 INFO    MainThread:6023 [wandb_init.py:_pause_backend():445] pausing backend
+2024-10-20 23:03:49,885 INFO    MainThread:6023 [wandb_init.py:_resume_backend():450] resuming backend
+2024-10-20 23:04:01,805 INFO    MainThread:6023 [jupyter.py:save_ipynb():387] not saving jupyter notebook
+2024-10-20 23:04:01,805 INFO    MainThread:6023 [wandb_init.py:_pause_backend():445] pausing backend
+2024-10-20 23:06:14,874 INFO    MainThread:6023 [wandb_init.py:_resume_backend():450] resuming backend
+2024-10-20 23:08:57,769 INFO    MainThread:6023 [jupyter.py:save_ipynb():387] not saving jupyter notebook
+2024-10-20 23:08:57,769 INFO    MainThread:6023 [wandb_init.py:_pause_backend():445] pausing backend
+2024-10-20 23:09:05,576 INFO    MainThread:6023 [wandb_init.py:_resume_backend():450] resuming backend
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Current SDK version is 0.18.5
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Configure stats pid to 6023
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Loading settings from /home/miguel/.config/wandb/settings
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Loading settings from /home/miguel/Desktop/IA_Proyeto_2/wandb/settings
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2024-10-20 23:09:05,599 INFO    MainThread:6023 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-10-20 23:09:05,600 INFO    MainThread:6023 [wandb_init.py:_log_setup():534] Logging user logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241020_230905-fzp1wz5t/logs/debug.log
+2024-10-20 23:09:05,600 INFO    MainThread:6023 [wandb_init.py:_log_setup():535] Logging internal logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241020_230905-fzp1wz5t/logs/debug-internal.log
+2024-10-20 23:09:05,600 INFO    MainThread:6023 [wandb_init.py:init():621] calling init triggers
+2024-10-20 23:09:05,600 INFO    MainThread:6023 [wandb_init.py:init():628] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'batch_size': 64, 'num_epochs': 10, 'architecture_A': 'ResNet50', 'architecture_B': 'CustomCNN', 'dataset': 'ImageFolder'}
+2024-10-20 23:09:05,600 INFO    MainThread:6023 [wandb_init.py:init():646] re-initializing run, found existing run on stack: wg7sdlzs
+2024-10-20 23:09:05,603 INFO    MainThread:6023 [wandb_run.py:_finish():2158] finishing run miguelsanchez712000-itcr/model_comparison/wg7sdlzs
+2024-10-20 23:09:05,603 INFO    MainThread:6023 [jupyter.py:save_history():459] not saving jupyter history
+2024-10-20 23:09:05,603 INFO    MainThread:6023 [jupyter.py:save_ipynb():387] not saving jupyter notebook
+2024-10-20 23:09:05,603 INFO    MainThread:6023 [wandb_init.py:_jupyter_teardown():462] cleaning up jupyter logic
+2024-10-20 23:09:05,603 INFO    MainThread:6023 [wandb_run.py:_atexit_cleanup():2426] got exitcode: 0
+2024-10-20 23:09:05,604 INFO    MainThread:6023 [wandb_run.py:_restore():2408] restore
+2024-10-20 23:09:05,604 INFO    MainThread:6023 [wandb_run.py:_restore():2414] restore done
+2024-10-20 23:09:09,105 INFO    MainThread:6023 [wandb_run.py:_footer_history_summary_info():3975] rendering history
+2024-10-20 23:09:09,106 INFO    MainThread:6023 [wandb_run.py:_footer_history_summary_info():4007] rendering summary
+2024-10-20 23:09:09,115 INFO    MainThread:6023 [wandb_run.py:_footer_sync_info():3934] logging synced files

@@ -19,3 +19,21 @@
 {"time":"2024-10-20T21:29:59.004116204-06:00","level":"INFO","msg":"Pausing system monitor"}
 {"time":"2024-10-20T21:29:59.020440127-06:00","level":"INFO","msg":"Resuming system monitor"}
 {"time":"2024-10-20T21:40:04.782166256-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T23:03:49.227465094-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T23:03:49.267818972-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T23:03:49.268217874-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T23:03:49.871495453-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T23:03:49.886089823-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T23:04:01.806044815-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T23:06:14.875286519-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T23:08:57.769603167-06:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2024-10-20T23:09:05.577974505-06:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2024-10-20T23:09:05.604741692-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-20T23:09:05.605299971-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-20T23:09:06.605118648-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.623977021,"subtasks":[{"desc":"wandb-job.json","runtime_seconds":0.105220877,"progress":"2.0KB/2.0KB"},{"desc":"requirements.frozen.txt","runtime_seconds":0.105207197,"progress":"6.1KB/6.1KB"}]}],"total_operations":1}}
+{"time":"2024-10-20T23:09:07.880447894-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-20T23:09:09.120380398-06:00","level":"INFO","msg":"stream: closing","id":"wg7sdlzs"}
+{"time":"2024-10-20T23:09:09.120425199-06:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"wg7sdlzs"}}
+{"time":"2024-10-20T23:09:09.120457491-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"wg7sdlzs"}}
+{"time":"2024-10-20T23:09:09.1205848-06:00","level":"INFO","msg":"sender: closed","stream_id":"wg7sdlzs"}
+{"time":"2024-10-20T23:09:09.120618336-06:00","level":"INFO","msg":"stream: closed","id":"wg7sdlzs"}

@@ -147,12 +147,16 @@ val_loader = DataLoader(dataset=val_dataset, batch_size=batch_size, shuffle=Fals
 # Definir la función de pérdida
 criterion = nn.CrossEntropyLoss()
 
-# Función de entrenamiento con WandB
+# Función de entrenamiento con WandB y cálculo de precisión
 def train(model, train_loader, criterion, optimizer, device, model_name, dataset_name, epoch):
     model.train()
     running_loss = 0.0
+    correct_predictions = 0
+    total_samples = 0
+
     for images, labels in train_loader:
         images, labels = images.to(device), labels.to(device)
+        total_samples += labels.size(0)  # Contar muestras para calcular accuracy
 
         optimizer.zero_grad()
         with torch.amp.autocast('cuda'):
@@ -165,9 +169,21 @@ def train(model, train_loader, criterion, optimizer, device, model_name, dataset
 
         running_loss += loss.item()
 
+        # Calcular el número de predicciones correctas
+        _, predicted = torch.max(outputs, 1)
+        correct_predictions += (predicted == labels).sum().item()
+
     average_loss = running_loss / len(train_loader)
-    wandb.log({f"{model_name}_{dataset_name}_train_loss": average_loss, 'epoch': epoch})
-    return average_loss
+    accuracy = correct_predictions / total_samples
+
+    # Registrar loss y accuracy en WandB
+    wandb.log({
+        f"{model_name}_{dataset_name}_train_loss": average_loss,
+        f"{model_name}_{dataset_name}_train_accuracy": accuracy,
+        'epoch': epoch
+    })
+
+    return average_loss, accuracy
 
 # Función de validación con WandB y matriz de confusión
 def validate_and_plot_confusion_matrix(model, val_loader, criterion, device, model_name, dataset_name, epoch):

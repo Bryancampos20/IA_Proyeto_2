@@ -1,0 +1,12 @@
+/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py:55: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+
+--- Epoch [1/10] ---
+Traceback (most recent call last):
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 309, in <module>
+    print(f"Modelo A - Raw Data - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+TypeError: unsupported format string passed to tuple.__format__
+Traceback (most recent call last):
+  File "/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py", line 309, in <module>
+    print(f"Modelo A - Raw Data - Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.4f}")
+TypeError: unsupported format string passed to tuple.__format__

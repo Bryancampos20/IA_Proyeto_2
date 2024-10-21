@@ -1,0 +1,26 @@
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Current SDK version is 0.18.5
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Configure stats pid to 36295
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Loading settings from /home/miguel/.config/wandb/settings
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Loading settings from /home/miguel/Desktop/IA_Proyeto_2/wandb/settings
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'proyecto2.py', 'program_abspath': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py', 'program': '/home/miguel/Desktop/IA_Proyeto_2/proyecto2.py'}
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_init.py:_log_setup():534] Logging user logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241020_230415-6ti1rqut/logs/debug.log
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_init.py:_log_setup():535] Logging internal logs to /home/miguel/Desktop/IA_Proyeto_2/wandb/run-20241020_230415-6ti1rqut/logs/debug-internal.log
+2024-10-20 23:04:15,009 INFO    MainThread:36295 [wandb_init.py:init():621] calling init triggers
+2024-10-20 23:04:15,010 INFO    MainThread:36295 [wandb_init.py:init():628] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.001, 'batch_size': 64, 'num_epochs': 10, 'architecture_A': 'ResNet50', 'architecture_B': 'CustomCNN', 'dataset': 'ImageFolder'}
+2024-10-20 23:04:15,010 INFO    MainThread:36295 [wandb_init.py:init():671] starting backend
+2024-10-20 23:04:15,010 INFO    MainThread:36295 [wandb_init.py:init():675] sending inform_init request
+2024-10-20 23:04:15,011 INFO    MainThread:36295 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-10-20 23:04:15,011 INFO    MainThread:36295 [wandb_init.py:init():688] backend started and connected
+2024-10-20 23:04:15,013 INFO    MainThread:36295 [wandb_init.py:init():783] updated telemetry
+2024-10-20 23:04:15,017 INFO    MainThread:36295 [wandb_init.py:init():816] communicating run to backend with 90.0 second timeout
+2024-10-20 23:04:15,419 INFO    MainThread:36295 [wandb_init.py:init():867] starting run threads in backend
+2024-10-20 23:04:15,658 INFO    MainThread:36295 [wandb_run.py:_console_start():2463] atexit reg
+2024-10-20 23:04:15,658 INFO    MainThread:36295 [wandb_run.py:_redirect():2311] redirect: wrap_raw
+2024-10-20 23:04:15,659 INFO    MainThread:36295 [wandb_run.py:_redirect():2376] Wrapping output streams.
+2024-10-20 23:04:15,659 INFO    MainThread:36295 [wandb_run.py:_redirect():2401] Redirects installed.
+2024-10-20 23:04:15,660 INFO    MainThread:36295 [wandb_init.py:init():911] run started, returning control to user process
+2024-10-20 23:04:26,930 WARNING MsgRouterThr:36295 [router.py:message_loop():77] message_loop has been closed
